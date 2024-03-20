@@ -31,7 +31,7 @@ export const Accordeon = React.memo((props: AccordeonProps) => {
     if (doublecol) {
         return (
             <div className="flex flex-col sm:flex-row gap-5">
-                <ul className={classNames('flex flex-col gap-5', {}, [className])}>
+                <ul className={classNames('flex flex-col gap-5 flex-1', {}, [className])}>
                     {list.slice(0, Math.floor(list.length / 2)).map((el, i) => (
                         <AccordeonItem
                             title={el.title}
@@ -44,7 +44,7 @@ export const Accordeon = React.memo((props: AccordeonProps) => {
                     ))}
                 </ul>
 
-                <ul className={classNames('flex flex-col gap-5', {}, [className])}>
+                <ul className={classNames('flex flex-col gap-5 flex-1', {}, [className])}>
                     {list.slice(Math.floor(list.length / 2)).map((el, i) => (
                         <AccordeonItem
                             title={el.title}

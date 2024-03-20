@@ -15,17 +15,23 @@
         height: 1.6875rem;
     }
 
-    .footerContainer::before {
-        content: '';
-        position: absolute;
-        top: calc(100% - 7.6rem);
-        left: 1.125rem;
-        width: 50.875rem;
-        height: 38.75rem;
-        background-image: url("shared/assets/img/bubles.png");
+    /*.footerContainer::before {*/
+    /*    content: '';*/
+    /*    position: absolute;*/
+    /*    top: calc(100% - 7.6rem);*/
+    /*    left: 1.125rem;*/
+    /*    width: 50.875rem;*/
+    /*    height: 38.75rem;*/
+    /*    background-image: url("shared/assets/img/footer.webp");*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-size: cover;*/
+    /*    transform: rotate(150deg);*/
+    /*    z-index: 1;*/
+    /*}*/
+
+    .footer{
+        background-image: url("shared/assets/img/footer.webp");
+        background-position: 28% 100%;
         background-repeat: no-repeat;
-        background-size: cover;
-        transform: rotate(150deg);
-        z-index: 1;
     }
 }

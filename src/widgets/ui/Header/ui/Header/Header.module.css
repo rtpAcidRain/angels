@@ -45,6 +45,7 @@ html:not(:global(.has-scroll-init.has-scroll-smooth)) .header{
     will-change: opacity;
     pointer-events: none;
     z-index: 1;
+    background-color: rgba(29, 32, 35, 0.4);
 }
 
 
