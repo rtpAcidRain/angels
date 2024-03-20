@@ -1,0 +1,72 @@
+html:not(:global(.has-scroll-init.has-scroll-smooth)) .header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header {
+    height: var(--header);
+    z-index: 90;
+}
+
+.logo {
+    width: auto;
+    height: 1.25rem;
+}
+
+.submenu {
+    @apply pt-2 fixed transition-opacity;
+    opacity: 0;
+    pointer-events: none;
+    perspective: 2000px;
+    perspective-origin: 50% 500px;
+    z-index: 2;
+    will-change: opacity;
+}
+
+.submenu :global(.submenu-2){
+    @apply transition-transform;
+    transform: rotateX(-30deg);
+    transform-origin: 50% -50px;
+    will-change: transform;
+
+}
+
+.blur {
+    @apply transition-opacity;
+    transition-duration: 300ms;
+    position: fixed;
+    opacity: 0;
+    top: var(--header);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(6px);
+    will-change: opacity;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+.showSub,
+.subMenuLink:hover + .submenu,
+.submenu:hover,
+.subMenuLink:hover + .submenu + .blur,
+.submenu:hover + .blur,
+.showSub + .blur {
+   pointer-events: auto;
+   opacity: 1;
+}
+
+.showSub :global(.submenu-2),
+.subMenuLink:hover + .submenu :global(.submenu-2),
+.submenu:hover :global(.submenu-2){
+    transform: rotateX(0deg);
+}
+
+@screen sm {
+    .logo {
+        height: 1.75rem;
+    }
+}
+

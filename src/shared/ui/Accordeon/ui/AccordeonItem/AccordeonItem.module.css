@@ -1,0 +1,78 @@
+.accordeonItem {
+    list-style: none;
+    cursor: pointer !important;
+    height: fit-content;
+}
+
+.stat {
+    cursor: default;
+}
+
+.accordeonItem .body {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition-property: grid-template-rows;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.accordeonItem .body > span {
+    min-height: 0;
+    display: block;
+}
+
+.accordeonItem .heading{
+    @apply flex w-full justify-between gap-[1.625rem] text-left;
+}
+
+.accordeonItem .heading > span {
+    display: flex;
+    gap: 0.4em;
+    flex: 1;
+}
+
+.opened .body {
+    grid-template-rows: 1fr;
+}
+
+.svg  rect:first-child {
+    transform: rotateX(0);
+    transform-origin: center !important;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.opened .svg  rect:first-child {
+    transform: rotateX(90deg);
+
+}
+
+.accordeonItem .body {
+    @apply text-13med sm:text-17reg text-bluegrey600;
+}
+
+.small {
+    @apply rounded-xl p-3 sm:p-5 bg-blue30;
+}
+
+.small .heading {
+    @apply text-15semi sm:text-17semi ;
+}
+
+.small .body > span >span {
+    @apply pt-5 block;
+}
+
+.svg {
+    fill: #007BFB;
+    width: 20px;
+    height: 20px;
+}
+
+@screen sm {
+    .svg{
+        @apply w-6 h-6;
+    }
+}

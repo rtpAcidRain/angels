@@ -1,0 +1,46 @@
+.checkbox {
+    @apply flex ;
+}
+
+.checkboxEl{
+    @apply w-6 h-6 block;
+    position: relative;
+    /*visibility: hidden;*/
+}
+
+.svg,
+.checkboxEl::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.svg {
+    fill: #fff;
+    display: none;
+}
+
+.checkbox input {
+    visibility: hidden;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.checkboxEl::before {
+    @apply border-2 border-bluegrey900;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+.checkbox input:checked + .checkboxEl::before{
+    @apply bg-bluegrey900;
+}
+
+.checkbox input:checked + .checkboxEl > .svg {
+    display: block;
+}

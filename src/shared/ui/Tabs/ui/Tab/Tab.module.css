@@ -1,0 +1,14 @@
+.tab {
+    @apply text-15med sm:text-17med transition-colors;
+    padding: 0.4375rem 0.875rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+}
+
+.tab:hover{
+    @apply border-blue300;
+}
+
+.active {
+    @apply bg-blue500 !border-blue500 text-blue30;
+}

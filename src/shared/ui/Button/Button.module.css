@@ -1,0 +1,186 @@
+@property --left {
+    syntax: "<color>";
+    initial-value: #005ec7;
+    inherits: false;
+}
+
+@property --right {
+    syntax: "<color>";
+    initial-value: #53a5ff;
+    inherits: false;
+}
+
+@property --textLeft {
+    syntax: "<color>";
+    initial-value: #fff;
+    inherits: false;
+}
+
+@property --textRight {
+    syntax: "<color>";
+    initial-value: #fff;
+    inherits: false;
+}
+
+.button {
+    --tf: cubic-bezier(0.4, 0, 0.2, 1);
+    --dur: 200ms;
+    @apply w-full sm:w-fit;
+    display: flex;
+    justify-content: center;
+    gap: 0.375rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    height: fit-content;
+}
+
+.withoutText {
+    padding: 0.75rem;
+    border-radius: 12px;
+}
+
+.icon {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon linearGradient stop:first-child {
+    stop-color: var(--textLeft);
+}
+
+.icon linearGradient stop:last-child {
+    stop-color: var(--textRight);
+}
+
+.text,
+.icon linearGradient stop:first-child,
+.icon linearGradient stop:last-child {
+    transition-property:--textLeft, --textRight;
+    transition-timing-function: var(--tf);
+    transition-duration: var(--dur);
+}
+
+/*PRIMARY*/
+
+.primary {
+    background: linear-gradient(134deg, var(--left) 0%, var(--right) 100%);
+    transition-property: --left, --right;
+    transition-timing-function: var(--tf);
+    transition-duration: var(--dur);
+}
+
+.secondary .text,
+.white .text,
+.primary .text {
+    background-image: linear-gradient(134deg, var(--textLeft) 0%, var(--textRight) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+
+.primary:hover {
+    --left:  #151c20;
+    --right: #2d3e47;
+}
+
+.secondary:hover  linearGradient stop:first-child,
+.secondary:hover  linearGradient stop:last-child,
+.secondary:hover .text,
+.white:hover  linearGradient stop:first-child,
+.white:hover  linearGradient stop:last-child,
+.white:hover .text {
+    --textLeft: #005ec7;
+    --textRight: #53a5ff;
+}
+/*---------------------------------*/
+
+/*ATTENTION*/
+
+.save,
+.attention {
+    @apply bg-amber800 text-whitefull;
+    transition-property: background-color, color,--textLeft, --textRight;
+    transition-timing-function: var(--tf);
+    transition-duration: var(--dur);
+
+}
+
+.attention:hover  {
+    @apply bg-amber50 text-amber900 ;
+}
+
+.attention:hover .icon linearGradient stop:first-child,
+.attention:hover .icon linearGradient stop:last-child{
+    --textLeft: rgb(255 111 0);
+    --textRight: rgb(255 111 0);
+}
+
+/*---------------------------------*/
+
+/*Save*/
+
+.save{
+    @apply bg-green500;
+
+}
+
+.save:hover  {
+    @apply bg-green50 text-green900 ;
+}
+
+.save:hover .icon linearGradient stop:first-child,
+.save:hover .icon linearGradient stop:last-child{
+    --textLeft: rgb(27 94 32);
+    --textRight: rgb(27 94 32);
+}
+
+/*---------------------------------*/
+
+
+.secondary{
+    @apply border border-bluegrey400 transition-colors;
+    padding: 0.6875rem 1.4375rem;
+}
+
+.secondary  linearGradient stop:first-child,
+.secondary  linearGradient stop:last-child,
+.secondary .text {
+    --textLeft: rgb(38 50 56);
+    --textRight: rgb(38 50 56);
+}
+
+.secondary:hover  {
+    @apply border-blue200 text-blue200;
+}
+
+
+/*---------------------------------*/
+
+.white {
+    @apply bg-whitefull;
+}
+
+
+.white  linearGradient stop:first-child,
+.white  linearGradient stop:last-child,
+.white .text {
+    --textLeft: rgb(38 50 56);
+    --textRight: rgb(38 50 56);
+}
+
+.disabled,
+.disabled *,
+.disabled:hover,
+.disabled:hover * {
+    @apply !text-bluegrey200 !bg-bluegrey50;
+    cursor: default !important;
+    --textLeft: rgb(176 190 197) !important;
+    --textRight: rgb(176 190 197) !important;
+    --left: rgb(236 239 241) !important;
+    --right: rgb(236 239 241) !important;
+}

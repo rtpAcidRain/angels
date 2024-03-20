@@ -1,0 +1,11 @@
+.background {
+    background-size: 348px 365px;
+    background-image: url("shared/assets/img/emploumetBlock--mob.webp");
+}
+
+@screen sm {
+    .background {
+        background-size: 43rem 30.3125rem;
+        background-image: url("shared/assets/img/emploumetBlock.webp");
+    }
+}

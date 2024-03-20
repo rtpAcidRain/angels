@@ -1,0 +1,31 @@
+.footer {
+    overflow: hidden;
+}
+
+.logo {
+    height: 1.5rem;
+}
+
+.footerContainer li a{
+    @apply transition-colors hover:text-blue700;
+}
+
+@screen sm {
+    .logo {
+        height: 1.6875rem;
+    }
+
+    .footerContainer::before {
+        content: '';
+        position: absolute;
+        top: calc(100% - 7.6rem);
+        left: 1.125rem;
+        width: 50.875rem;
+        height: 38.75rem;
+        background-image: url("shared/assets/img/bubles.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotate(150deg);
+        z-index: 1;
+    }
+}

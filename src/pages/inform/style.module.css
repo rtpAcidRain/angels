@@ -1,0 +1,21 @@
+
+.paginationEl {
+    @apply rounded-lg border border-bluegrey300 text-bluegrey900 cursor-pointer whitespace-nowrap sm:w-fit;
+    --left: #fff;;
+    --right: #fff;
+    padding: 0.6875rem 1.4375rem;
+    background: linear-gradient(134deg, var(--left) 0%, var(--right) 100%);
+    transition-property: --left, --right, color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.paginationEl:not(.paginationElActive):hover {
+    @apply border-blue600 text-blue600;
+}
+
+.paginationElActive {
+    @apply px-6 py-3 text-whitefull border-0;
+    --left: #005ec7;
+    --right: #53a5ff;
+}

@@ -1,0 +1,126 @@
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.left {
+    top: var(--header);
+}
+
+.left .content,
+.overlay,
+.isClosing .overlay {
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+
+.opened .overlay {
+    @apply bg-opasity50 opacity-0;
+    animation-name: opacity;
+    width: 100%;
+    height: 100%;
+}
+
+.center .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    @apply bg-whitefull w-fit;
+}
+
+
+.center .content {
+    @apply h-screen w-screen sm:w-full sm:h-fit sm:rounded-2xl sm:m-10;
+    max-width: 903px;
+}
+
+
+.left .content {
+    height: 100%;
+    margin-left: auto;
+    transform: translateX(100%);
+}
+
+.opened {
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 9999;
+}
+
+.opened.left .content {
+    animation-delay: 150ms;
+    animation-duration: 600ms;
+    animation-name: fromLeft;
+}
+
+.isClosing .overlay{
+    @apply opacity-100;
+    animation-name: opacityRev;
+}
+
+.isClosing.left .overlay {
+    animation-delay: 500ms;
+}
+
+.isClosing.left .content {
+    transform: translateX(0);
+    animation-duration: 500ms;
+    animation-name: fromLeftRev;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes opacityRev {
+    0% {
+        opacity: 100;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes fromLeftRev {
+    0% {
+        transform: translateX(0) ;
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.overlay:where(:global(.dark, .dark *)) {
+    @apply bg-[rgba(0,0,0,0.5)];
+}
+
+.content:where(:global(.dark, .dark *)) {
+    @apply bg-bluegrey1000;
+}

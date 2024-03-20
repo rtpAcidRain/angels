@@ -1,0 +1,21 @@
+.input {
+
+}
+
+.title {
+    top: 1.375rem;
+    transition-property: top, font-size;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    cursor: text;
+}
+
+.label::after {
+    @apply w-full h-[1px] rounded-full absolute bottom-0 translate-y-1/2 bg-grey300 left-0;
+    content: '';
+}
+
+.opened .title {
+    @apply text-13med text-grey600;
+    top: 0;
+}

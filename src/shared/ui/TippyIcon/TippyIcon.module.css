@@ -1,0 +1,50 @@
+.tippysvg {
+    @apply w-5 h-5;
+}
+
+.tippysvg rect,
+.tippysvg path:nth-child(2) {
+    @apply stroke-[#455A64];
+}
+
+.tippysvg path:nth-child(3){
+    @apply fill-[#455A64];
+}
+
+.tippysvg.whiteSvg rect,
+.tippysvg.whiteSvg path:nth-child(2) {
+    @apply stroke-[#FAFAFA];
+}
+
+.tippysvg.whiteSvg path:nth-child(3){
+    @apply fill-[#FAFAFA];
+}
+
+.tippybox{
+    @apply bg-bluegrey700;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33em;
+    border-radius: 0.5rem;
+}
+
+.tippyarr,
+.tippyarr::before{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+}
+
+.tippyarr {
+    visibility: hidden;
+    top: -4px;
+}
+
+.tippyarr::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+}

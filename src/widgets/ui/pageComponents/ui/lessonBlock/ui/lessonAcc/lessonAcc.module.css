@@ -1,0 +1,65 @@
+.body {
+    @apply sm:px-16;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition-property: grid-template-rows;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.body > span {
+    min-height: 0;
+    display: block;
+}
+
+.lessonAcc {
+    @apply p-3 bg-whitefull w-full rounded-xl sm:bg-transparent sm:px-0 relative sm:py-6;
+}
+
+.lessonAcc::before {
+    @apply rounded-xl hidden sm:block right-10 left-10;
+    content: '';
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.heading{
+    @apply w-full relative flex justify-between sm:grid grid-cols-12 gap-5 items-center;
+}
+
+.heading::after {
+    content: url('data:image/svg+xml;charset=utf-8,<svg width="10" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.89 15s6.223-6.222 6.223-7c0-.778-6.222-7-6.222-7" stroke="%23fff" stroke-width="1.867" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    height: 1.25rem;
+    width: 0.5rem;
+    @apply flex items-center justify-center bg-bluegrey600 rounded-full w-10 h-10 sm:w-12 sm:h-12  right-0 bottom-2 static col-span-2 justify-self-end sm:mr-16;
+    padding-top: 4px;
+    padding-left: 2px;
+    transform: rotate(90deg);
+}
+
+.opened + .body {
+    grid-template-rows: 1fr;
+}
+
+.opened::after {
+    transform: rotate(-90deg) ;
+}
+
+.body svg {
+    @apply w-5 h-5 sm:w-6 sm:h-6 fill-[#424242];
+}
+
+.disabled .body{
+    grid-template-rows: 1fr !important;
+}
+
+.disabled .body > span > span {
+    padding-top: 0 !important;
+}
+
+.disabled .heading{
+    display: none;
+}
