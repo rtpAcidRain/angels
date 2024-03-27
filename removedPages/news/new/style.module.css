@@ -1,0 +1,68 @@
+.body {
+    @apply lg:pr-11 col-span-9;
+    order: 3;
+}
+
+.body > p {
+    @apply text-15reg sm:text-17reg text-grey800 ;
+}
+
+.body > p:not(:last-child) {
+    @apply mb-3 sm:mb-4;
+}
+
+.body img {
+    @apply rounded-xl sm:rounded-3xl aspect-[320/300] object-cover;
+}
+
+.body > img {
+    @apply mt-8 sm:mt-10  sm:aspect-[1016/420];
+}
+
+.body table {
+    @apply mt-8 flex flex-col gap-4 sm:table-cell;
+}
+
+.body p + table {
+    @apply sm:pt-7;
+}
+
+.body table td:not(:last-child),
+.body table th:not(:last-child),
+.body table tr:not(:last-child){
+    @apply sm:pr-6;
+}
+
+.body table img {
+    @apply sm:aspect-[496/420];
+}
+
+.body > img:not(:last-child) {
+    @apply mb-4 sm:mb-10;
+}
+
+.body > p:first-child {
+    max-width: 529px;
+}
+
+.body > h2,
+.body > p:not(:first-child) {
+    @apply sm:pr-[12.25rem];
+}
+
+.body > h2 {
+    @apply mb-4 sm:mb-6 text-bluegrey900 text-24semi sm:text-40semi;
+}
+
+.background {
+    @apply bg-no-repeat bg-bottom mt-12 mb-[3.75rem] sm:my-10;
+    background-image: url("shared/assets/img/seoblockback--mob.webp");
+    background-size: auto 328px;
+}
+
+@screen sm {
+    .background {
+        @apply bg-right bg-contain;
+        background-image: url("shared/assets/img/seoblockback.webp");
+    }
+}
