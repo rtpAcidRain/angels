@@ -9,19 +9,19 @@ const ContactsPage: React.FC<PageProps> = () => (
         <ul className="flex gap-6 flex-col mb-[3.75rem] sm:mb-[3.125rem] col-span-9 max-w-[699px] lg:ml-auto sm:grid grid-cols-2 sm:gap-y-6 sm:gap-x-[4.4375rem]">
             <li className="w-fit col-start-1 row-start-1">
                 <span className="text-15reg text-bluegrey500 mb-1 block">Номер телефона</span>
-                <a className="block text-17reg" href="tel:+74950239626">+7 (495)-023-96-26</a>
+                <a className="block text-17reg" href="tel:+79003351900">+7(900)335-19-00</a>
             </li>
             <li className="w-fit col-start-2 row-start-1 mt-auto">
                 <span className="text-15reg text-bluegrey500 mb-1 block">Адресс</span>
                 <span className="block text-17reg">
-                    Г. Москва, Очаковское
-                    <br />
-                    шоссе 34. БЦ West Park
+                    111024, г. Москва, вн. тер. г. муниципальный
+                    округ Лефортово, ш. Энтузиастов, д. 22/18,
+                    помещ. 4П
                 </span>
             </li>
             <li className="w-fit col-start-1 row-start-2 mt-auto">
                 <span className="text-15reg text-bluegrey500 mb-1 block">Email</span>
-                <a className="block text-17reg" href="mailto:coop@svet-expert.com">Coop@svet-expert.com</a>
+                <a className="block text-17reg" href="mailto:angels-school@yandex.ru">angels-school@yandex.ru</a>
             </li>
             <li className="w-fit col-start-2 row-start-2 mt-auto">
                 <span className="text-15reg text-bluegrey500 mb-1 block">График работы:</span>
@@ -55,7 +55,6 @@ const ContactsPage: React.FC<PageProps> = () => (
                             <p>
                                 Генеральный директор:
                                 <br />
-                                {' '}
                                 Крымская Екатерина Валерьевна
                             </p>
                         </span>
@@ -92,4 +91,14 @@ const ContactsPage: React.FC<PageProps> = () => (
 
 export default ContactsPage;
 
-export const Head: HeadFC = () => <title>Контакты</title>;
+export const Head: HeadFC = () => (
+    <>
+        <title>
+            Контакты образовательной платформы Angel's school — как с нами связаться
+        </title>
+        <meta
+            name="description"
+            content={'Телефон, адрес, контактные данные и реквизиты Angel\'s school. Свяжитесь с нами любым удобным для вас способом'}
+        />
+    </>
+);

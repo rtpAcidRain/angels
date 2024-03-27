@@ -14,7 +14,8 @@ interface SeoBlockProps {
     className?: string,
     theme?: SeoEnums,
     title?: string,
-    text?: string
+    text?: string,
+    children?: React.ReactNode
 }
 
 export const SeoBlock = (props: SeoBlockProps) => {
@@ -23,7 +24,29 @@ export const SeoBlock = (props: SeoBlockProps) => {
         theme = SeoEnums.DEFAULT,
         title,
         text,
+        children,
     } = props;
+
+    if (children) {
+        return (
+            <Section className={classNames('', {}, [className])}>
+                <div
+                    className={classNames(cls.background, {}, [cls.backgroundDoc, 'rounded-2xl sm:rounded-3xl bg-bluegrey900'])}
+                >
+                    <div className="p-4 sm:p-8">
+                        <h2 className="text-27semi sm:text-40semi text-whitefull mb-6 sm:mb-11">
+                            Подтверждение ваших
+                            <br />
+                            навыков
+                        </h2>
+                        <p className="text-15reg sm:text-17reg text-whitefull mb-[12.625rem] sm:mb-0 max-w-[29.5rem] whitespace-pre-line">
+                            {children}
+                        </p>
+                    </div>
+                </div>
+            </Section>
+        );
+    }
 
     if (theme === SeoEnums.DOCUMENT) {
         return (
@@ -37,10 +60,14 @@ export const SeoBlock = (props: SeoBlockProps) => {
                             <br />
                             навыков
                         </h2>
-                        <p className="text-15reg sm:text-17reg text-whitefull mb-[12.625rem] sm:mb-[6.625rem] max-w-[29.5rem]">
-                            Вы получите удостоверение о повышении
-                            <br />
-                            квалификации, который станет дополнительным аргументом для работодателя.
+                        <p className="text-15reg sm:text-17reg text-whitefull mb-[12.625rem] sm:mb-[6.625rem] max-w-[29.5rem] whitespace-pre-line">
+                            {text ?? (
+                                <span>
+                                    Вы получите удостоверение о повышении
+                                    <br />
+                                    квалификации, который станет дополнительным аргументом для работодателя.
+                                </span>
+                            )}
                         </p>
                         <Button
                             theme={ButtonTheme.WHITE}

@@ -6,6 +6,7 @@ export const FormModalButton = (props: ButtonProps) => {
     const {
         className,
         text,
+        theme,
     } = props;
 
     const { setFormModal, setFormModalPermanent } = React.useContext(GlobalContext);
@@ -19,7 +20,7 @@ export const FormModalButton = (props: ButtonProps) => {
 
     return (
         <Button
-            theme={ButtonTheme.WHITE}
+            theme={theme ?? ButtonTheme.WHITE}
             className={className}
             onClick={openFormModal}
             text={text}

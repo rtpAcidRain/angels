@@ -1,7 +1,6 @@
 import * as React from 'react';
-import type { HeadFC, PageProps } from 'gatsby';
+import { HeadFC, PageProps } from 'gatsby';
 import { Section } from 'shared/ui/Section/Section';
-import mainBack from 'shared/assets/img/general1.webp';
 import {
     ForWho,
     LearningSchema,
@@ -17,6 +16,7 @@ import Work from 'shared/assets/svg/work.inline.svg';
 import { TippyIcon } from 'shared/ui/TippyIcon/TippyIcon';
 import { FormModalButton } from 'features/FormModal';
 import { SeoEnums } from 'widgets/ui/pageComponents/ui/seoBlock/seoBlock';
+import mainBack from 'shared/assets/img/directionArch--full.webp';
 
 const forWhoList = [
     {
@@ -72,14 +72,16 @@ const ArchitecPage: React.FC<PageProps> = () => (
                             Светодизайн
                         </span>
                         <TippyIcon name="ДПО" className="hidden sm:flex" whiteSvg>
-                            В своём стремлении повысить
+                            Профильная подготовка
                             <br />
-                            качество жизни, они забывают,
+                            специалистов в рамках программ
                             <br />
-                            что постоянный.
+                            повышения квалификации и
+                            <br />
+                            переподготовке профессионалов
                         </TippyIcon>
                     </div>
-                    <h1 className="text-32semi sm:text-64med text-whitefull mb-[0.9375rem] sm:mb-6">
+                    <h1 className="text-32semi sm:text-56semi text-whitefull mb-[0.9375rem] sm:mb-6">
                         Курс “Архитектурный
                         <br />
                         светодизайн”
@@ -149,9 +151,7 @@ const ArchitecPage: React.FC<PageProps> = () => (
                     <Chat className="fill-[#222628] w-8 h-8" />
                     <p className="flex-1">
                         Проект для портфолио и обратная
-                        {' '}
                         <br />
-                        {' '}
                         связь от экспертов
                     </p>
                 </li>
@@ -232,14 +232,16 @@ const ArchitecPage: React.FC<PageProps> = () => (
         {/* </Section> */}
         <Section>
             <div className="py-8 px-4 sm:px-8 bg-bluegrey900 text-whitefull rounded-2xl">
-                <h2 className="text-27semi mb-6 sm:text-40semi sm:mb-[3.125rem]">Чему вы научитесь</h2>
+                <h2 className="text-27semi mb-6 sm:text-40semi sm:mb-[3.125rem]">
+                    Чему вы научитесь
+                </h2>
                 <div className="grid text-17semi sm:text-20med sm:grid-cols-3 sm:gap-y-8">
                     <div className="pb-5 sm:py-4 sm:pr-[3.125rem]">
                         Будете разбираться в архитектурном освещении и светотехническом
                         оборудовании
                     </div>
                     <div className="py-5 sm:py-4 border-y sm:border-y-0 sm:border-x border-dashed border-[#4F6672] sm:px-[3.125rem] ">
-                        Научитесь создавать световые концепции и подбирать оборудование.
+                        Научитесь создавать световые концепции и подбирать оборудование
                     </div>
                     <div className="py-5 sm:py-4 sm:pl-[3.125rem]">
                         Сможете делать предпроектный анализ, готовить концепцию и
@@ -251,7 +253,7 @@ const ArchitecPage: React.FC<PageProps> = () => (
                         компьютерного моделирования освещения
                     </div>
                     <div className="py-5 sm:py-4 sm:border-x border-dashed border-[#4F6672] sm:px-[3.125rem] ">
-                        Научитесь решать задачи клиента с помощью света
+                        Сможете решать задачи клиента с помощью света
                     </div>
                     <div className="pt-5 sm:py-4 border-t border-dashed border-[#4F6672] sm:border-0 sm:pl-[3.125rem]">
                         Соберёте портфолио и сможете начать карьеру светодизайнера
@@ -261,9 +263,15 @@ const ArchitecPage: React.FC<PageProps> = () => (
         </Section>
         <ForWho list={forWhoList} />
         {/* <EmploumetBlock theme={ServiceEnum.DOCUMENT} /> */}
-        <SeoBlock
-            theme={SeoEnums.DOCUMENT}
-        />
+        <SeoBlock>
+            После обучения Вы получите
+            <br />
+            <br />
+            Документ установленного образца: удостоверение о повышении квалификации   выдается специалистам с высшим и средним профессиональным образованием,  успешно прошедшим обучение и сдавшим итоговую аттестацию.
+            <br />
+            <br />
+            Сведения о выдаваемых документах мы вносим в федеральную информационную систему «Федеральный реестр сведений документов об образовании» (ФИС ФРДО).
+        </SeoBlock>
         {/* Что вы изучите  */}
         <Section className="!px-0 flex flex-col">
             <h2 className="container text-32semi sm:text-40semi mb-6 sm:mb-[3.125rem] order-2">
@@ -272,7 +280,12 @@ const ArchitecPage: React.FC<PageProps> = () => (
             <p className="container text-15med sm:text-17semi text-bluegrey600 mb-3 sm:mb-4 order-1">
                 Обучение
             </p>
-            <LessonBlock className="order-3" list={learningList} download="Учебный_план_«Архитектурный_светодизайн»_72.docx" to="/files/information/direc_arch_pers.docx" />
+            <LessonBlock
+                className="order-3"
+                list={learningList}
+                download="Учебный_план_«Архитектурный_светодизайн»_72.docx"
+                to="https://angels-school.ru/include/gtrybuild/files/information/direc_arch_pers.docx"
+            />
         </Section>
         {/* <EmploumetBlock /> */}
         <SeoBlock
@@ -287,5 +300,13 @@ const ArchitecPage: React.FC<PageProps> = () => (
 export default ArchitecPage;
 
 export const Head: HeadFC = () => (
-    <title>Курс “Архитектурный светодизайн”</title>
+    <>
+        <title>
+            Курс архитектурного светодизайна - обучение художников по свету в школе Angel's school в Москве
+        </title>
+        <meta
+            name="description"
+            content={'Онлайн-курс "Профессия Архитектурный светодизайнер" в аккредитованной школе Angel\'s school. Обучение на платформе на архитектурного светодизайнера в Москве, Санкт-Петербурге и в любом регионе РФ с сертификатом или дипломом о профессиональном дополнительном образовании.'}
+        />
+    </>
 );

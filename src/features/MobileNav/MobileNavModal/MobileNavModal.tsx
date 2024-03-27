@@ -70,12 +70,12 @@ export const MobileNavModal = (props: MobileNavModalProps) => {
                         >
                             Соц. сети
                         </span>
-                        <div className="flex gap-4 justify-between mb-4 text-bluegrey800 dark:text-grey200">
-                            <a href="/">Телеграм</a>
-                            <a href="/">Еще какая то</a>
-                            <a href="/">И еще че то</a>
-                        </div>
-                        <a href="tel:+79040306572" className="text-bluegrey800 dark:text-grey200">+7 9040306572</a>
+                        {/* <div className="flex gap-4 justify-between mb-4 text-bluegrey800 dark:text-grey200"> */}
+                        {/*    <a href="/">Телеграм</a> */}
+                        {/*    <a href="/">Еще какая то</a> */}
+                        {/*    <a href="/">И еще че то</a> */}
+                        {/* </div> */}
+                        <a href="tel:+79003351900" className="text-bluegrey800 dark:text-grey200">+7 (900) 335-19-00</a>
                     </div>
                 </div>
             </div>

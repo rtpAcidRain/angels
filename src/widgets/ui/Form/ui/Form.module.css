@@ -44,3 +44,11 @@
 .checkbox input:checked + .checkboxEl > .svg {
     display: block;
 }
+
+.modalCloseButton {
+    display: none !important;
+}
+
+:global(.modal) .modalCloseButton {
+    display: flex !important;
+}

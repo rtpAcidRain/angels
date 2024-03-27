@@ -48,7 +48,7 @@ export const AccordeonItem = React.memo((props: AccordeonItemProps) => {
             {text && (
                 <span className={cls.body}>
                     <span>
-                        <span className="">
+                        <span className="whitespace-pre-line">
                             {text}
                         </span>
                     </span>

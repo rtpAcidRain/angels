@@ -143,6 +143,19 @@ html:not(.has-scroll-init.has-scroll-smooth) .page {
 }
 
 
+.list-with-disc li{
+    @apply flex;
+}
+
+.list-with-disc li::before {
+    @apply bg-bluegrey900;
+    content: '';
+    min-width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin: 0.625rem;
+}
+
 @screen scaleMedia {
     html {
         font-size: max(13px, min(16px, calc(13px + 5 * ((100vw - 640px) / 1280))));

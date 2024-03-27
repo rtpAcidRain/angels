@@ -177,10 +177,21 @@
 .disabled *,
 .disabled:hover,
 .disabled:hover * {
-    @apply !text-bluegrey200 !bg-bluegrey50;
+    @apply !text-bluegrey200 !bg-bluegrey50 ;
     cursor: default !important;
     --textLeft: rgb(176 190 197) !important;
     --textRight: rgb(176 190 197) !important;
     --left: rgb(236 239 241) !important;
     --right: rgb(236 239 241) !important;
+}
+
+:global(.dark) .disabled,
+:global(.dark) .disabled *,
+:global(.dark) .disabled:hover,
+:global(.dark) .disabled:hover * {
+    @apply !text-bluegrey700 !bg-bluegrey900;
+    --textLeft: rgb(69 90 100) !important;
+    --textRight: rgb(69 90 100) !important;
+    --left: rgb(38 50 56) !important;
+    --right: rgb(38 50 56) !important;
 }

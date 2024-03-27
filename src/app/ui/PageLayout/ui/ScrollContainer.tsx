@@ -1,7 +1,11 @@
 import React from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
-const ScrollContainer = ({ location, children }: any) => {
+interface ScrollContainerProps {
+    location: Location,
+    children: React.ReactNode
+}
+const ScrollContainer: React.FC<ScrollContainerProps> = ({ location, children }) => {
     const { scroll } = useLocomotiveScroll();
     React.useEffect(() => {
         if (scroll) {

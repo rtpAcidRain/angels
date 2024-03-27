@@ -15,7 +15,34 @@
     content: '';
 }
 
+
 .opened .title {
     @apply text-13med text-grey600;
     top: 0;
+}
+
+.errorContainer {
+    @apply mb-6 relative;
+}
+
+.errorContainer.label::after{
+    @apply bg-red600;
+}
+
+.errorContainer .title{
+    @apply !text-red600;
+}
+
+.errorContainer .error {
+    @apply absolute text-red600 top-full left-0 text-13med;
+    transform: translateY(4px);
+}
+
+:global(.dark) .errorContainer .error,
+:global(.dark) .errorContainer .title {
+    @apply !text-red400;
+}
+
+:global(.dark) .errorContainer.label::after {
+    @apply bg-red400;
 }

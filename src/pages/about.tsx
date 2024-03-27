@@ -1,8 +1,8 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
 import { Section } from 'shared/ui/Section/Section';
-import mainBack from 'shared/assets/img/about1.webp';
-import { ExpretsBlock, SeoBlock, AdvantagesBlock } from 'widgets/ui/pageComponents';
+import mainBack from 'shared/assets/img/about-back.webp';
+import { SeoBlock } from 'widgets/ui/pageComponents';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const IndexPage: React.FC<PageProps> = () => (
@@ -32,7 +32,7 @@ const IndexPage: React.FC<PageProps> = () => (
                         с нашей школой
                     </h1>
                     <p className="text-15reg sm:text-17reg text-blue50 max-w-[481px]">
-                        Наш центр дополнительного профессионального образования Angels School специализируется на обучении и подготовке специалистов в области архитектурно - ландшафтного светодизайна.
+                        Центр дополнительного профессионального образования Angels School специализируется на обучении и подготовке специалистов в области архитектурно - ландшафтного светодизайна.
                     </p>
                 </div>
             </div>
@@ -49,13 +49,13 @@ const IndexPage: React.FC<PageProps> = () => (
                         maxWidth: '611px',
                     }}
                 >
-                    Наша миссия - сделать образование доступным для каждого, независимо от
+                    Мы стараемся сделать образование доступным для каждого, независимо от
                     места проживания, возраста и уровня подготовки
                 </p>
             </div>
             <StaticImage
                 className="aspect-[320/322] sm:aspect-auto rounded-3xl"
-                src="../shared/assets/img/about_image.jpg"
+                src="../shared/assets/img/about-miss.jpg"
                 alt="Небоскребы"
                 formats={['auto', 'webp']}
             />
@@ -64,7 +64,7 @@ const IndexPage: React.FC<PageProps> = () => (
         <SeoBlock />
         <Section title="Контакты">
             <div className="relative">
-                <div className="aspect-[320/340] sm:aspect-[1420/743] overflow-hidden mb-4 lg:mb-0 rounded-3xl">
+                <div className="aspect-[320/340] sm:aspect-[1420/620] overflow-hidden mb-4 lg:mb-0 rounded-3xl">
                     <iframe
                         title="БЦ West Park"
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A30c8a948c49372c3a1e5da4cfffe7274c8cf2acafa18cde1e4be793f2d2c9980&amp;source=constructor"
@@ -83,24 +83,27 @@ const IndexPage: React.FC<PageProps> = () => (
                         <ul className="grid gap-6 sm:grid-cols-2  lg:gap-y-8">
                             <li>
                                 <span className="text-15reg text-bluegrey500 mb-1 block">Номер телефона</span>
-                                <a className="block text-17reg" href="tel:+74950239626">+7 (495)-023-96-26</a>
+                                <a className="block text-17reg" href="tel:+79003351900">+7(900)335-19-00</a>
                             </li>
                             <li>
                                 <span className="text-15reg text-bluegrey500 mb-1 block">Адресс</span>
                                 <span className="block text-17reg">
-                                    Г. Москва, Очаковское
-                                    {' '}
+                                    115035, г. Москва,
                                     <br />
-                                    шоссе 34. БЦ West Park
+                                    Пятницкая ул., д 13с1
                                 </span>
                             </li>
                             <li>
                                 <span className="text-15reg text-bluegrey500 mb-1 block">Email</span>
-                                <a className="block text-17reg" href="mailto:coop@svet-expert.com">Coop@svet-expert.com</a>
+                                <a className="block text-17reg" href="mailto:angels-school@yandex.ru">angels-school@yandex.ru</a>
                             </li>
+                            {/* <li> */}
+                            {/*    <span className="text-15reg text-bluegrey500 mb-1 block">Предложение сотрудничества</span> */}
+                            {/*    <a className="block text-17reg" href="mailto:coop@svet-expert.com">Coop@svet-expert.com</a> */}
+                            {/* </li> */}
                             <li>
-                                <span className="text-15reg text-bluegrey500 mb-1 block">Предложение сотрудничества</span>
-                                <a className="block text-17reg" href="mailto:coop@svet-expert.com">Coop@svet-expert.com</a>
+                                <span className="text-15reg text-bluegrey500 mb-1 block">ОГРН</span>
+                                <a className="block text-17reg" href="mailto:coop@svet-expert.com">1187746511776</a>
                             </li>
                         </ul>
                     </div>
@@ -132,4 +135,14 @@ const IndexPage: React.FC<PageProps> = () => (
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>О нас</title>;
+export const Head: HeadFC = () => (
+    <>
+        <title>
+            Онлайн-школа светового дизайна Angel's school
+        </title>
+        <meta
+            name="description"
+            content={'Курсы светодизайна с дипломом государственного образца и помощью в трудоустройстве. Дистанционное обучение с нуля до профессии в онлайн школе Angel\'s school. Курсы архитектурного светодизайна на реальных кейсах и практикой. Подготовка портфолио во время обучения.'}
+        />
+    </>
+);

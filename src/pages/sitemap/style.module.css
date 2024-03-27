@@ -1,0 +1,28 @@
+.section h4{
+    @apply text-20semi sm:text-27semi mb-[1.875rem] sm:mb-10;
+}
+
+.section p{
+    @apply text-13med sm:text-17reg mb-4 flex gap-1;
+}
+
+.section p span:first-child {
+    min-width: 20px;
+}
+
+.section h4:not(:first-child) {
+    @apply mt-[3.75rem] sm:mt-20;
+}
+
+.section p span:last-child {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -moz-box-flex: 1;
+    flex: 1 1 0%;
+}
+
+@screen sm {
+    .section p span:first-child {
+        min-width: 32px;
+    }
+}

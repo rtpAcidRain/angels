@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React from 'react';
+import React, { JSX } from 'react';
 import { Link } from 'gatsby';
 import Icon from 'shared/assets/svg/like.inline.svg';
 import { TippyIcon } from 'shared/ui/TippyIcon/TippyIcon';
@@ -11,7 +11,9 @@ interface DirectionLinkProps {
     tag: string,
     currentTag: string,
     bg?: string,
-    to?: string
+    to?: string,
+    tippyTitle?: string,
+    tippyDesc?: string,
 }
 
 export const DirectionLink = (props: DirectionLinkProps) => {
@@ -23,6 +25,8 @@ export const DirectionLink = (props: DirectionLinkProps) => {
         currentTag,
         bg,
         to = '/',
+        tippyTitle,
+        tippyDesc,
     } = props;
 
     const mods = {
@@ -87,13 +91,11 @@ export const DirectionLink = (props: DirectionLinkProps) => {
                 <span className="whitespace-pre-wrap text-20semi sm:text-32semi relative z-10">
                     {title}
                 </span>
-                <TippyIcon name="ДПО" className="hidden sm:flex ">
-                    В своём стремлении повысить
-                    <br />
-                    качество жизни, они забывают,
-                    <br />
-                    что постоянный.
-                </TippyIcon>
+                {tippyTitle && (
+                    <TippyIcon name={tippyTitle} className="hidden sm:flex text-bluegrey700">
+                        { tippyDesc }
+                    </TippyIcon>
+                )}
             </span>
 
             {top && (

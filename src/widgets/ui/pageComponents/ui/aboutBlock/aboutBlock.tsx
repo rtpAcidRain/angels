@@ -1,13 +1,15 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React from 'react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import Svg1 from 'shared/assets/svg/about_info1.inline.svg';
-import Svg2 from 'shared/assets/svg/about_info2.inline.svg';
-import Svg3 from 'shared/assets/svg/about_info3.inline.svg';
+// import Svg1 from 'shared/assets/svg/about_info1.inline.svg';
+// import Svg2 from 'shared/assets/svg/about_info2.inline.svg';
+// import Svg3 from 'shared/assets/svg/about_info3.inline.svg';
 import { Section } from 'shared/ui/Section/Section';
 import InsertedVideo from 'shared/assets/videos/video.mp4';
 import { Video } from 'shared/ui/Video/Video';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import PreoladVideo from 'shared/assets/img/about-video-preload.jpg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 interface AboutBlockProps {
     className?: string,
@@ -31,13 +33,15 @@ export const AboutBlock = (props: AboutBlockProps) => {
                     className="!hidden sm:!flex"
                 />
             </div>
-            <Video
-                video={InsertedVideo}
-                className="
-            rounded-xl sm:rounded-2xl overflow-hidden
-            mb-6
-            sm:mb-0"
-            />
+            {/* <Video */}
+            {/*    video={InsertedVideo} */}
+            {/*    poster={PreoladVideo} */}
+            {/*    className=" */}
+            {/* rounded-xl sm:rounded-2xl overflow-hidden */}
+            {/* mb-6 */}
+            {/* sm:mb-0" */}
+            {/* /> */}
+            <StaticImage src="../../../../../shared/assets/img/about-video-preload.jpg" alt="О нас" className="rounded-xl sm:rounded-2xl overflow-hidden mb-6 sm:mb-0" />
             <Button
                 to={RoutePath.about}
                 text="Подробнее"

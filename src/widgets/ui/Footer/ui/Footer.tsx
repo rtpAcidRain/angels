@@ -3,11 +3,12 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import Logo from 'shared/assets/svg/logoMob.inline.svg';
 import { Link } from 'gatsby';
 import React from 'react';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { FormModalButton } from 'features/FormModal';
 import * as cls from './Footer.module.css';
 
 interface FooterProps {
-    className?: string,
+  className?: string;
 }
 
 export const Footer = (props: FooterProps) => {
@@ -54,19 +55,22 @@ export const Footer = (props: FooterProps) => {
                                 </ul>
                             </div>
                             <div className="sm:col-span-3 hidden sm:block">
-                                <Button text="Записаться на курс" className="mb-4 lg:ml-auto" to="/" />
+                                <FormModalButton theme={ButtonTheme.PRIMARY} text="Записаться на курс" className="mb-4 lg:ml-auto" to="/" />
                             </div>
                         </div>
                         <div className="mt-4 sm:mt-[6.0625rem] sm:grid sm:grid-cols-12 sm:gap-5">
-                            <div className="col-span-6  justify-self-end tye sm:text-end flex">
+                            <div className="col-span-6 justify-self-end tye sm:text-end flex">
                                 <div className="mt-auto">
-                                    <a className="text-17semi sm:text-20bold" itemProp="url" href="tel:+89003351900">8 (900) 335-19-00</a>
+                                    <a className="text-17semi sm:text-20bold" itemProp="url" href="tel:+79003351900">+7(900)335-19-00</a>
                                     <p className="text-13med text-bluegrey400 text-13med">Контактный центр</p>
                                 </div>
                             </div>
-                            <div className="col-start-1 row-start-1 col-span-6 sm:grid">
+                            <div className="col-span-2 text-15med col-start-5 row-start-1 h-fit mt-[0.8125rem] sm:mt-auto ">
+                                <Link className="text-blueGrey900 hover:text-blue700 transition-colors" to={RoutePath.sitemap}>Карта сайта</Link>
+                            </div>
+                            <div className="col-start-1 row-start-1 col-span-4 sm:grid ">
                                 <a className="text-15semi sm:text-17med mt-[0.8125rem] sm:mt-[0.9375rem] block w-fit sm:row-start-3" itemProp="url" href="mailto:angels-school@yandex.ru">angels-school@yandex.ru</a>
-                                <p className="text-13med mt-6 sm:mt-[0.3125rem]">
+                                <p className="text-13med sm:text-17med mt-6 sm:mt-[0.3125rem]">
                                     115035, г. Москва, Пятницкая ул., д 13с1
                                 </p>
                                 <Link
@@ -85,7 +89,7 @@ export const Footer = (props: FooterProps) => {
                             <li><Link to={RoutePath.termofuse} itemProp="url">Политика пользовательского соглашения</Link></li>
                             <li><a href="/" itemProp="url">Оплата</a></li>
                             <li><a href="/" itemProp="url">Оферта</a></li>
-                            <li><Link to={RoutePath.inform} itemProp="url">Правовая информация</Link></li>
+                            <li><Link to={`${RoutePath.inform}/#legal-information`} itemProp="url">Правовая информация</Link></li>
                             <li><Link to={`${RoutePath.inform}/#basic-information`} itemProp="url">Сведения об образовательной организации</Link></li>
                         </ul>
                         <div className="text-13med flex flex-col gap-[1.125rem] col-span-5 row-span-2">

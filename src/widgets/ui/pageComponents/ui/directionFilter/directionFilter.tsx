@@ -18,6 +18,10 @@ const directionArray = [
         to: '/directions/architectual',
         bg: `url('${Bg1}')`,
         top: false,
+        tippy: {
+            title: 'ДПО',
+            description: 'Профильная подготовка \n специалистов в рамках программ \n повышения квалификации и \n переподготовке профессионалов',
+        },
     },
     {
         title: 'Светодизайнер',
@@ -25,6 +29,10 @@ const directionArray = [
         to: '/directions/svet',
         bg: `url('${Bg2}')`,
         top: false,
+        tippy: {
+            title: 'ДО',
+            description: 'Доп. образование направлено\n на формирование и развитие\n определенных знаний, профильное\n образование не требуется',
+        },
     },
 ];
 
@@ -35,7 +43,9 @@ export const DirectionFilter = React.memo(
         const { className } = props;
         // const [active, setActive] = React.useState<string>('all');
 
-        const renderLinks = React.useCallback(() => directionArray.map((el, i) => <DirectionLink key={el.title} bg={el.bg} title={el.title} tag={el.tag} to={el.to} currentTag="all" top={el.top} />), []);
+        const renderLinks = React.useCallback(() => directionArray.map(
+            (el, i) => <DirectionLink key={el.title} bg={el.bg} title={el.title} tag={el.tag} to={el.to} tippyTitle={el.tippy.title} tippyDesc={el.tippy.description} currentTag="all" top={el.top} />,
+        ), []);
 
         return (
             // <Section className={classNames(cls.directionFilter, {}, [className, '!px-0'])}>

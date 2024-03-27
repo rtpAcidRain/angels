@@ -324,7 +324,7 @@ export default {
                 {
                     lineHeight: '1.4em',
                     letterSpacing: '-0.01em',
-                    fontWeight: '420',
+                    fontWeight: '500',
                 },
             ],
             '17reg': [

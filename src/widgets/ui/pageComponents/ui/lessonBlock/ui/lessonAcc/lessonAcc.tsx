@@ -50,7 +50,7 @@ export const LessonAcc = (props: LessonAccProps) => {
                     <span className="pt-3 sm:pt-6 block relative text-15semi sm:text-17semi text-bluegrey800 flex flex-col gap-4 sm:gap-6">
                         {themes?.map((el) => (
                             <span
-                                className="pt-4 border-t border-dashed border-bluegrey200 flex gap-[0.375rem] sm:gap-3"
+                                className="sublistItem pt-4 sm:pt-6  border-t border-dashed border-bluegrey200 flex gap-[0.375rem] sm:gap-3"
                                 key={el}
                             >
                                 <Lock />

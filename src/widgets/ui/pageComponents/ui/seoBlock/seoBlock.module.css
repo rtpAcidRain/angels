@@ -1,20 +1,23 @@
 .background {
     @apply bg-no-repeat bg-bottom;
-    background-image: url("shared/assets/img/seoblockback--mob.webp");
+    /*background-image: url("shared/assets/img/seoblockback--mob.webp");*/
     background-size: 100% auto;
+    background-image: url("shared/assets/img/seoblockback--new.webp");
 }
 
 .backgroundDoc {
-    background-image: url("shared/assets/img/docum-mob.webp");
+    /*background-image: url("shared/assets/img/docum-mob.webp");*/
+    background-image: url("shared/assets/img/seo-access.webp");
 }
 
 @screen sm {
     .background {
-        @apply bg-right bg-contain;
-        background-image: url("shared/assets/img/seoblockback.webp");
+        @apply bg-right;
+        background-size: auto 100%;
+        /*background-image: url("shared/assets/img/seoblockback.webp");*/
     }
 
     .backgroundDoc {
-        background-image: url("shared/assets/img/docum.webp");
+        /*background-image: url("shared/assets/img/docum.webp");*/
     }
 }

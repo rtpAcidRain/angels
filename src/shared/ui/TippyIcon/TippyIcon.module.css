@@ -28,6 +28,7 @@
     font-weight: 500;
     line-height: 1.33em;
     border-radius: 0.5rem;
+    white-space: pre-line;
 }
 
 .tippyarr,

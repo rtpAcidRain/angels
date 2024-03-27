@@ -30,7 +30,7 @@
     /*}*/
 
     .footer{
-        background-image: url("shared/assets/img/footer.webp");
+        /*background-image: url("shared/assets/img/footer.webp");*/
         background-position: 28% 100%;
         background-repeat: no-repeat;
     }

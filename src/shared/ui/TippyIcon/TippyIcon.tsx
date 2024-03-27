@@ -25,7 +25,7 @@ export const TippyIcon = (props: TippyIconProps) => {
 
     return (
         <span className={`items-center gap-1 w-fill ${className && className}`}>
-            <span className="">{name}</span>
+            <span className="text-20med">{name}</span>
             <span className="flex items-center">
                 <Tippy
                     placement="bottom"
@@ -38,7 +38,7 @@ export const TippyIcon = (props: TippyIconProps) => {
                 >
                     <button
                         type="button"
-                        className="w-fit text-20med text-bluegrey700"
+                        className="w-fit "
                     >
                         <TipyySvg className={classNames(cls.tippysvg, mods, [])} />
                     </button>

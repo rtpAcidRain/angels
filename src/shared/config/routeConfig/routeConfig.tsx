@@ -11,6 +11,7 @@ export enum AppRoutes {
     NEWS_DETAILS = 'news_details',
     CONTACTS = 'contacts',
     INFORM = 'inform',
+    SITEMAP = 'sitemap',
     POLICY = 'policy',
     TERMOFUSE = 'termofuse',
 
@@ -30,6 +31,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.NEWS_DETAILS]: '/news/new',
     [AppRoutes.CONTACTS]: '/contacts',
     [AppRoutes.INFORM]: '/inform',
+    [AppRoutes.SITEMAP]: '/sitemap',
     [AppRoutes.POLICY]: '/policy',
     [AppRoutes.TERMOFUSE]: '/termofuse',
     [AppRoutes.LOGIN]: 'https://angels-school.ru/include/login',

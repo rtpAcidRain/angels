@@ -5,13 +5,16 @@ export interface GlobalContextProps {
     setFormModal?: React.Dispatch<React.SetStateAction<boolean>>;
     formModalPermanent?: boolean;
     setFormModalPermanent?: React.Dispatch<React.SetStateAction<boolean>>;
+    location?: Location;
 }
 export const GlobalContext = React.createContext<GlobalContextProps>({});
 interface GlobalProviderProps {
+    location: Location,
     children: React.ReactNode
 }
 const GlobalProvider: FC<GlobalProviderProps> = (props) => {
     const {
+        location,
         children,
     } = props;
 
@@ -23,7 +26,8 @@ const GlobalProvider: FC<GlobalProviderProps> = (props) => {
         setFormModal,
         formModalPermanent,
         setFormModalPermanent,
-    }), [formModalPermanent, formModal]);
+        location,
+    }), [location, formModalPermanent, formModal]);
 
     return (
         <GlobalContext.Provider value={defaultProps}>
