@@ -7,14 +7,13 @@ import { Button } from 'shared/ui/Button/Button';
 import * as cls from './Footer.module.css';
 
 interface FooterProps {
-    className?: string,
+  className?: string;
 }
 
 export const Footer = (props: FooterProps) => {
     const { className } = props;
 
     return (
-
         <footer
             data-scroll-section
             className={classNames(cls.footer, {}, [
@@ -22,7 +21,10 @@ export const Footer = (props: FooterProps) => {
                 'pt-8 sm:pt-[3.5625rem] pb-6 sm:pb-[2.125rem] bg-blue30 dark:bg-bluegrey900',
             ])}
         >
-            <div data-scroll className={classNames(cls.footerContainer, {}, ['container relative'])}>
+            <div
+                data-scroll
+                className={classNames(cls.footerContainer, {}, ['container relative'])}
+            >
                 <div className="relative z-10">
                     <Link to={RoutePath.main} className="w-fit block col-span-2">
                         <Logo className={classNames(cls.logo, {}, [className, 'logo'])} />
@@ -30,7 +32,9 @@ export const Footer = (props: FooterProps) => {
                     <div className="pt-8 pb-[1.375rem] sm:pb-[1.9375rem] sm:pt-[3.75rem]">
                         <div className="flex flex-col gap-[1.625rem] sm:grid lg:grid-cols-12 sm:gap-5">
                             <div className="col-span-4 ">
-                                <h6 className="text-13med text-bluegrey400 mb-3 sm:mb-[1.125rem]">Направления</h6>
+                                <h6 className="text-13med text-bluegrey400 mb-3 sm:mb-[1.125rem]">
+                                    Направления
+                                </h6>
                                 <ul className="text-17med flex flex-col gap-[6px] sm:gap-y-3 sm:grid grid-cols-2 sm:gap-x-5">
                                     <li>
                                         <Link to="/">Программирование</Link>
@@ -53,7 +57,9 @@ export const Footer = (props: FooterProps) => {
                                 </ul>
                             </div>
                             <div className="col-span-4">
-                                <h6 className="text-13med text-bluegrey400 mb-3 sm:mb-[1.125rem]">О нас</h6>
+                                <h6 className="text-13med text-bluegrey400 mb-3 sm:mb-[1.125rem]">
+                                    О нас
+                                </h6>
                                 <ul className="text-17med flex flex-col gap-[6px] sm:gap-y-3 sm:grid grid-cols-2 sm:gap-x-5">
                                     <li>
                                         <Link to="/">Лицензия</Link>
@@ -80,9 +86,17 @@ export const Footer = (props: FooterProps) => {
                                 </ul>
                             </div>
                             <div className="sm:col-span-4 ">
-                                <Button text="Записаться на курс" className="!hidden sm:!flex mb-4 lg:ml-auto" to="/" />
+                                <Button
+                                    text="Записаться на курс"
+                                    className="!hidden sm:!flex mb-4 lg:ml-auto"
+                                    to="/"
+                                />
                                 <div className="flex gap-3 sm:gap-4 lg:ml-auto lg:w-fit">
-                                    <a href="/" itemProp="url" className="w-10 h-10 sm:w-12 sm:h-12 rounded-[0.625rem] sm:rounded-xl border border-bluegrey400 transition-colors hover:border-blue200 flex items-center justify-center">
+                                    <a
+                                        href="/"
+                                        itemProp="url"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-[0.625rem] sm:rounded-xl border border-bluegrey400 transition-colors hover:border-blue200 flex items-center justify-center"
+                                    >
                                         <svg
                                             className="h-[0.625rem] sm:h-3 w-auto"
                                             viewBox="0 0 22 12"
@@ -95,7 +109,11 @@ export const Footer = (props: FooterProps) => {
                                             />
                                         </svg>
                                     </a>
-                                    <a href="/" itemProp="url" className="w-10 h-10 sm:w-12 sm:h-12 rounded-[0.625rem] sm:rounded-xl border border-bluegrey400 transition-colors hover:border-blue200 flex items-center justify-center">
+                                    <a
+                                        href="/"
+                                        itemProp="url"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-[0.625rem] sm:rounded-xl border border-bluegrey400 transition-colors hover:border-blue200 flex items-center justify-center"
+                                    >
                                         <svg
                                             className="h-[0.625rem] sm:h-3 w-auto"
                                             viewBox="0 0 22 12"
@@ -108,7 +126,11 @@ export const Footer = (props: FooterProps) => {
                                             />
                                         </svg>
                                     </a>
-                                    <a href="/" itemProp="url" className="w-10 h-10 sm:w-12 sm:h-12 rounded-[0.625rem] sm:rounded-xl border border-bluegrey400 transition-colors hover:border-blue200 flex items-center justify-center">
+                                    <a
+                                        href="/"
+                                        itemProp="url"
+                                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-[0.625rem] sm:rounded-xl border border-bluegrey400 transition-colors hover:border-blue200 flex items-center justify-center"
+                                    >
                                         <svg
                                             className="h-[0.625rem] sm:h-3 w-auto"
                                             viewBox="0 0 22 12"
@@ -127,48 +149,117 @@ export const Footer = (props: FooterProps) => {
                         <div className="mt-4 sm:mt-[2.375rem] sm:grid sm:grid-cols-12 sm:gap-5">
                             <div className="col-span-6  justify-self-end tye sm:text-end">
                                 <div className="mb-[0.8125rem]">
-                                    <a className="text-17semi sm:text-20bold" itemProp="url" href="tel:+74951595904">8 (495) 159-59-04</a>
-                                    <p className="text-13med text-bluegrey400 text-13med">Контактный центр</p>
+                                    <a
+                                        className="text-17semi sm:text-20bold"
+                                        itemProp="url"
+                                        href="tel:+74951595904"
+                                    >
+                                        8 (495) 159-59-04
+                                    </a>
+                                    <p className="text-13med text-bluegrey400 text-13med">
+                                        Контактный центр
+                                    </p>
                                 </div>
                                 <div>
-                                    <a className="text-17semi sm:text-20bold" href="tel:+74951595904">+7 495 159 59 04</a>
-                                    <p className="text-13med text-bluegrey400 text-13med">Контактный центр</p>
+                                    <a
+                                        className="text-17semi sm:text-20bold"
+                                        href="tel:+74951595904"
+                                    >
+                                        +7 495 159 59 04
+                                    </a>
+                                    <p className="text-13med text-bluegrey400 text-13med">
+                                        Контактный центр
+                                    </p>
                                 </div>
                             </div>
                             <div className="col-start-1 row-start-1 col-span-6 sm:grid">
-                                <a className="text-15semi sm:text-17med mt-[0.8125rem] sm:mt-[0.9375rem] block w-fit sm:row-start-3" itemProp="url" href="mailto:angels-school@yandex.ru">angels-school@yandex.ru</a>
+                                <a
+                                    className="text-15semi sm:text-17med mt-[0.8125rem] sm:mt-[0.9375rem] block w-fit sm:row-start-3"
+                                    itemProp="url"
+                                    href="mailto:school@angels-school.ru"
+                                >
+                                    school@angels-school.ru
+                                </a>
                                 <p className="text-13med mt-6 sm:mt-[0.3125rem]">
                                     г. Москва, ул. Тимура Фрунзе, дом 11, корпус 2, этаж 1,
                                     <br className="hidden sm:block" />
                                     помещение 1, комната 75
                                 </p>
-                                <a href="/" itemProp="url" className="text-15reg sm:text-17med pb-[1px] border-b border-dashed border-bluegrey400 mt-4 block w-fit">Показать на картах</a>
+                                <a
+                                    href="/"
+                                    itemProp="url"
+                                    className="text-15reg sm:text-17med pb-[1px] border-b border-dashed border-bluegrey400 mt-4 block w-fit"
+                                >
+                                    Показать на картах
+                                </a>
                             </div>
                         </div>
-                        <Button text="Записаться на курс" className=" sm:!hidden mt-[22px]" to="/" />
+                        <Button
+                            text="Записаться на курс"
+                            className=" sm:!hidden mt-[22px]"
+                            to="/"
+                        />
                     </div>
                     <div className="pt-[1.4375rem] border-t border-bluegrey200 sm:border-blue200 sm:grid grid-cols-12 gap-x-5">
                         <ul className="flex gap-2 sm:gap-x-4 sm:gap-y-[0.875rem] flex-col sm:flex-row sm:flex-wrap text-13med col-span-6 max-w-[483px] h-fit mb-[2.125rem]">
-                            <li><Link to={RoutePath.policy} itemProp="url">Политика конфиденциальности</Link></li>
-                            <li><Link to={RoutePath.termofuse} itemProp="url">Политика пользовательского соглашения</Link></li>
-                            <li><a href="/" itemProp="url">Рекомендательные технологии</a></li>
-                            <li><a href="/" itemProp="url">Оплата</a></li>
-                            <li><a href="/" itemProp="url">Оферта</a></li>
-                            <li><a href="/" itemProp="url">Контакты</a></li>
-                            <li><Link to={RoutePath.inform} itemProp="url">Правовая информация</Link></li>
-                            <li><a href="/" itemProp="url">Сведения об образовательной организации</a></li>
+                            <li>
+                                <Link to={RoutePath.policy} itemProp="url">
+                                    Политика конфиденциальности
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={RoutePath.termofuse} itemProp="url">
+                                    Политика пользовательского соглашения
+                                </Link>
+                            </li>
+                            <li>
+                                <a href="/" itemProp="url">
+                                    Рекомендательные технологии
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" itemProp="url">
+                                    Оплата
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" itemProp="url">
+                                    Оферта
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" itemProp="url">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li>
+                                <Link to={RoutePath.inform} itemProp="url">
+                                    Правовая информация
+                                </Link>
+                            </li>
+                            <li>
+                                <a href="/" itemProp="url">
+                                    Сведения об образовательной организации
+                                </a>
+                            </li>
                         </ul>
                         <div className="text-13med flex flex-col gap-[1.125rem] col-span-6 row-span-2">
                             <p>
-                                Мы используем файлы cookie, для персонализации сервисов и повышения удобства пользования сайтом. Если вы не согласны на их использование, поменяйте настройки браузера.
-                            </p>
-                            <p>Образовательные услуги оказываются ЧОУ ДПО «Образовательные технологии «Скилбокс (Коробка навыков)» на основании Лицензии № Л035-01298-77/00179609 от 19 января 2022 года.</p>
-                            <p>
-                                Образовательные услуги оказываются в соответствии с Федеральным законом от 04.05.2011 № 99-ФЗ «О лицензировании отдельных видов деятельности».
+                                Мы используем файлы cookie, для персонализации сервисов и
+                                повышения удобства пользования сайтом. Если вы не согласны на их
+                                использование, поменяйте настройки браузера.
                             </p>
                             <p>
-                                Правообладатель ПО LMS «Angels school» ООО «Энжелс скул».
+                                Образовательные услуги оказываются ЧОУ ДПО «Образовательные
+                                технологии «Скилбокс (Коробка навыков)» на основании Лицензии №
+                                Л035-01298-77/00179609 от 19 января 2022 года.
                             </p>
+                            <p>
+                                Образовательные услуги оказываются в соответствии с Федеральным
+                                законом от 04.05.2011 № 99-ФЗ «О лицензировании отдельных видов
+                                деятельности».
+                            </p>
+                            <p>Правообладатель ПО LMS «Angels school» ООО «Энжелс скул».</p>
                         </div>
                         <p className="text-15med text-bluegrey400 col-span-6 h-fit mt-[1.875rem] sm:mt-auto">
                             с. Angels school, 2024

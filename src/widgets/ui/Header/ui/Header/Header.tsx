@@ -24,6 +24,7 @@ export const Header = React.memo((props: HeaderProps) => {
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
     const triggerShowSubMenu = React.useCallback(() => {
+        clearTimeout(timerRef.current);
         setSubMenu(true);
     }, []);
 
@@ -35,6 +36,11 @@ export const Header = React.memo((props: HeaderProps) => {
 
     React.useEffect(() => {
         clearTimeout(timerRef.current);
+        if (subMenu) {
+            return document.querySelector('html')?.classList.add('showsubmenu');
+        }
+
+        return document.querySelector('html')?.classList.remove('showsubmenu');
     }, [subMenu]);
 
     const itemsList = React.useMemo(() => HeaderItemsList.map((item) => (
@@ -83,16 +89,16 @@ export const Header = React.memo((props: HeaderProps) => {
                     <li className={classNames(cls.submenuContainer, {}, ['h-full'])}>
                         <HeaderLink className={cls.subMenuLink} disabled text="Курсы" to="/directions/" onMouseEnter={triggerShowSubMenu} onMouseLeave={triggerHideSubMenu} />
                         <span className={classNames(cls.submenu, { [cls.showSub]: subMenu }, [])}>
-                            <span className="submenu-2 bg-whitefull dark:bg-bluegrey1000 p-4 rounded-xl flex gap-[0.875rem]">
+                            <span className="submenu-2 bg-whitefull dark:bg-bluegrey1000 p-4 rounded-xl flex gap-[0.875rem]" onMouseEnter={triggerShowSubMenu} onMouseLeave={triggerHideSubMenu}>
                                 <span className="rounded-xl overflow-hidden" style={{ width: '154px', height: '132px' }}>
                                     <img src={SubMenu} alt="Курсы" className="" />
                                 </span>
                                 <ul className="text-15med">
                                     <li>
-                                        <Link to="/directions/architectual" className="rounded-[0.375rem] p-2 hover:bg-blue50 dark:hover:bg-bluegrey700 transition-colors block whitespace-nowrap">Архитектурный светодизайнер</Link>
+                                        <Link onClick={() => setSubMenu(false)} to="/directions/architectual" className="rounded-[0.375rem] p-2 hover:bg-blue50 dark:hover:bg-bluegrey700 transition-colors block whitespace-nowrap">Архитектурный светодизайнер</Link>
                                     </li>
                                     <li>
-                                        <Link to="/directions/svet" className="rounded-[0.375rem] p-2 hover:bg-blue50 dark:hover:bg-bluegrey700 transition-colors block whitespace-nowrap">Светодизайнер</Link>
+                                        <Link onClick={() => setSubMenu(false)} to="/directions/svet" className="rounded-[0.375rem] p-2 hover:bg-blue50 dark:hover:bg-bluegrey700 transition-colors block whitespace-nowrap">Светодизайнер</Link>
                                     </li>
                                 </ul>
                             </span>

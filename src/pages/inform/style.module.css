@@ -1,5 +1,5 @@
 .paginationEl {
-    @apply rounded-lg border border-bluegrey300 text-bluegrey900 cursor-pointer whitespace-nowrap sm:w-fit;
+    @apply rounded-lg border border-bluegrey300 text-bluegrey900 cursor-pointer whitespace-nowrap sm:whitespace-normal sm:w-fit;
     --left: #fff;;
     --right: #fff;
     padding: 0.6875rem 1.4375rem;
@@ -26,4 +26,67 @@
 .inf :global(.swiper-slide-active){
     visibility: visible;
 
+}
+
+.table {
+    width: 100%;
+    /* min-width: 700px; */
+}
+
+.table th,
+.table td{
+    @apply text-grey800 text-start align-top;
+}
+
+.table span {
+    @apply pb-5 pr-14 sm:pr-10 w-full h-full block;
+}
+
+.thead .col {
+    @apply text-17semi;
+}
+
+.tbody .col {
+    @apply text-17reg;
+}
+
+.trow {
+    /* @apply gap-14; */
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+}
+
+.table .tbody .col{
+    @apply pt-5 border-t border-grey400;
+}
+
+.tableContainer::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.tableContainer::-webkit-scrollbar-track {
+    background: transparent; 
+}
+ 
+.tableContainer::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+}
+
+.tableContainer::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+@media screen and (max-width: 640px) {
+    
+    .tableContainer::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .tableContainer {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
 }
