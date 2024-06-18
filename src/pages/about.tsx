@@ -32,7 +32,9 @@ const IndexPage: React.FC<PageProps> = () => (
                         с нашей школой
                     </h1>
                     <p className="text-15reg sm:text-17reg text-blue50 max-w-[481px]">
-                        Центр дополнительного профессионального образования Angels School специализируется на обучении и подготовке специалистов в области архитектурно - ландшафтного светодизайна.
+                        Центр дополнительного профессионального образования Angels School
+                        специализируется на обучении и подготовке специалистов в области
+                        архитектурно - ландшафтного светодизайна.
                     </p>
                 </div>
             </div>
@@ -82,11 +84,17 @@ const IndexPage: React.FC<PageProps> = () => (
                     >
                         <ul className="grid gap-6 sm:grid-cols-2  lg:gap-y-8">
                             <li>
-                                <span className="text-15reg text-bluegrey500 mb-1 block">Номер телефона</span>
-                                <a className="block text-17reg" href="tel:+79003351900">+7(900)335-19-00</a>
+                                <span className="text-15reg text-bluegrey500 mb-1 block">
+                                    Номер телефона
+                                </span>
+                                <a className="block text-17reg" href="tel:+79003351900">
+                                    +7(900)335-19-00
+                                </a>
                             </li>
                             <li>
-                                <span className="text-15reg text-bluegrey500 mb-1 block">Адресс</span>
+                                <span className="text-15reg text-bluegrey500 mb-1 block">
+                                    Адресс
+                                </span>
                                 <span className="block text-17reg">
                                     115035, г. Москва,
                                     <br />
@@ -94,16 +102,30 @@ const IndexPage: React.FC<PageProps> = () => (
                                 </span>
                             </li>
                             <li>
-                                <span className="text-15reg text-bluegrey500 mb-1 block">Email</span>
-                                <a className="block text-17reg" href="mailto:angels-school@yandex.ru">angels-school@yandex.ru</a>
+                                <span className="text-15reg text-bluegrey500 mb-1 block">
+                                    Email
+                                </span>
+                                <a
+                                    className="block text-17reg"
+                                    href="mailto:school@angels-school.ru"
+                                >
+                                    school@angels-school.ru
+                                </a>
                             </li>
                             {/* <li> */}
                             {/*    <span className="text-15reg text-bluegrey500 mb-1 block">Предложение сотрудничества</span> */}
                             {/*    <a className="block text-17reg" href="mailto:coop@svet-expert.com">Coop@svet-expert.com</a> */}
                             {/* </li> */}
                             <li>
-                                <span className="text-15reg text-bluegrey500 mb-1 block">ОГРН</span>
-                                <a className="block text-17reg" href="mailto:coop@svet-expert.com">1187746511776</a>
+                                <span className="text-15reg text-bluegrey500 mb-1 block">
+                                    ОГРН
+                                </span>
+                                <a
+                                    className="block text-17reg"
+                                    href="mailto:coop@svet-expert.com"
+                                >
+                                    1187746511776
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -128,7 +150,6 @@ const IndexPage: React.FC<PageProps> = () => (
                     {/* </div> */}
                 </div>
             </div>
-
         </Section>
     </>
 );
@@ -137,12 +158,12 @@ export default IndexPage;
 
 export const Head: HeadFC = () => (
     <>
-        <title>
-            Онлайн-школа светового дизайна Angel's school
-        </title>
+        <title>Онлайн-школа светового дизайна Angel's school</title>
         <meta
             name="description"
-            content={'Курсы светодизайна с дипломом государственного образца и помощью в трудоустройстве. Дистанционное обучение с нуля до профессии в онлайн школе Angel\'s school. Курсы архитектурного светодизайна на реальных кейсах и практикой. Подготовка портфолио во время обучения.'}
+            content={
+                "Курсы светодизайна с дипломом государственного образца и помощью в трудоустройстве. Дистанционное обучение с нуля до профессии в онлайн школе Angel's school. Курсы архитектурного светодизайна на реальных кейсах и практикой. Подготовка портфолио во время обучения."
+            }
         />
     </>
 );

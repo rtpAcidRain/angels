@@ -49,13 +49,19 @@ html:not(:global(.has-scroll-init.has-scroll-smooth)) .header{
 }
 
 
-.showSub,
+/* .showSub,
 .subMenuLink:hover + .submenu,
 .submenu:hover,
 .subMenuLink:hover + .submenu + .blur,
 .submenu:hover + .blur,
 .showSub + .blur {
    pointer-events: auto;
+   opacity: 1;
+} */
+
+:global(.showsubmenu) .submenu,
+:global(.showsubmenu) .blur{
+    pointer-events: auto;
    opacity: 1;
 }
 

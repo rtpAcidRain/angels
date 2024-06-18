@@ -69,11 +69,11 @@ export const SeoBlock = (props: SeoBlockProps) => {
                                 </span>
                             )}
                         </p>
-                        <Button
+                        {/* <Button
                             theme={ButtonTheme.WHITE}
                             text="Посмотреть документ"
                             aria-label="Посмотреть документ"
-                        />
+                        /> */}
                     </div>
                 </div>
             </Section>

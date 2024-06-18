@@ -4,7 +4,8 @@ import { Section } from 'shared/ui/Section/Section';
 import mainBack from 'shared/assets/img/directionSvetodis--full.webp';
 import {
     LearningSchema,
-    SeoBlock, LessonBlock,
+    SeoBlock,
+    LessonBlock,
 } from 'widgets/ui/pageComponents';
 import Grid from 'shared/assets/svg/grid.inline.svg';
 import Document from 'shared/assets/svg/document.inline.svg';
@@ -140,11 +141,13 @@ const ArchitecPage: React.FC<PageProps> = () => (
             <div className="flex flex-col gap-6 sm:grid grid-cols-2 sm:gap-5">
                 <h2 className="text-32semi sm:text-40semi">О профессии</h2>
                 <p className="text-15med sm:text-17med">
-                    Светодизайнер - это профессионал, который занимается проектированием и созданием световых решений
-                    для различных объектов, включая жилые и коммерческие здания, общественные пространства и другие
-                    объекты. Он работает с архитекторами и другими специалистами, чтобы создать гармоничное и
-                    функциональное освещение, которое подчеркивает особенности архитектуры, решает задачи безопасности
-                    и создает уникальную атмосферу.
+                    Светодизайнер - это профессионал, который занимается проектированием и
+                    созданием световых решений для различных объектов, включая жилые и
+                    коммерческие здания, общественные пространства и другие объекты. Он
+                    работает с архитекторами и другими специалистами, чтобы создать
+                    гармоничное и функциональное освещение, которое подчеркивает
+                    особенности архитектуры, решает задачи безопасности и создает
+                    уникальную атмосферу.
                 </p>
             </div>
         </Section>
@@ -155,10 +158,12 @@ const ArchitecPage: React.FC<PageProps> = () => (
                 </h2>
                 <div className="grid text-17semi sm:text-20med sm:grid-cols-2 lg:grid-cols-4 sm:gap-y-8">
                     <div className="pr-5 sm:border-r  border-dashed border-[#4F6672]">
-                        Чем занимается светодизайнер, где востребован, преимущества профессии и как им стать
+                        Чем занимается светодизайнер, где востребован, преимущества
+                        профессии и как им стать
                     </div>
                     <div className="lg:pr-5 sm:pl-5 lg:border-r border-dashed border-[#4F6672]">
-                        Последние тенденции и инновации в светодизайне, которые помогут вам быть в курсе последних разработок и применять их в своих проектах
+                        Последние тенденции и инновации в светодизайне, которые помогут вам
+                        быть в курсе последних разработок и применять их в своих проектах
                     </div>
                     <div className="sm:pr-5 lg:pl-5 sm:border-r border-dashed border-[#4F6672]">
                         Особенности архитектурной подсветки различных объектов
@@ -172,7 +177,10 @@ const ArchitecPage: React.FC<PageProps> = () => (
         <Section className="" title="Кому подойдут курсы">
             <div className="flex flex-col sm:grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-5 ">
                 {forWhoList?.map((el) => (
-                    <div key={el.title} className="bg-grey100 p-6 pb-4 rounded-2xl sm:p-8 flex flex-col flex-1 justify-between sm:min-h-[273px] h-auto">
+                    <div
+                        key={el.title}
+                        className="bg-grey100 p-6 pb-4 rounded-2xl sm:p-8 flex flex-col flex-1 justify-between sm:min-h-[273px] h-auto"
+                    >
                         <h3 className="text-20semi mb-12 sm:text-24semi ]">{el.title}</h3>
                         <p className="text-15reg text-bluegrey800 sm:text-17med ">
                             {el.text}
@@ -183,7 +191,9 @@ const ArchitecPage: React.FC<PageProps> = () => (
         </Section>
         <SeoBlock
             theme={SeoEnums.DOCUMENT}
-            text={'Вы получите сертификат, который станет\n дополнительным аргументом для\n работодателя.'}
+            text={
+                'Вы получите сертификат, который станет\n дополнительным аргументом для\n работодателя.'
+            }
         />
         <Section className="!px-0 flex flex-col">
             <h2 className="container text-32semi sm:text-40semi mb-6 sm:mb-[3.125rem] order-2">
@@ -192,7 +202,12 @@ const ArchitecPage: React.FC<PageProps> = () => (
             <p className="container text-15med sm:text-17semi text-bluegrey600 mb-3 sm:mb-4 order-1">
                 Обучение
             </p>
-            <LessonBlock className="order-3" list={learningList} download="Учебный план Светодизайнер 16 ч.docx" to="https://angels-school.ru/include/gtrybuild/files/information/direc_svet_pers.docx" />
+            <LessonBlock
+                className="order-3"
+                list={learningList}
+                download="Учебный план Светодизайнер 16 ч.pdf"
+                to="https://angels-school.ru/include/gtrybuild/files/information/direc_svet_pers.pdf"
+            />
         </Section>
         <SeoBlock
             title="Зажгите свою карьеру в светодизайне!"
@@ -207,7 +222,8 @@ export default ArchitecPage;
 export const Head: HeadFC = () => (
     <>
         <title>
-            Курс светодизайна - обучение художников по свету в школе Angel's school в Москве
+            Курс светодизайна - обучение художников по свету в школе Angel's school в
+            Москве
         </title>
         <meta
             name="keywords"
@@ -219,7 +235,9 @@ export const Head: HeadFC = () => (
         />
         <meta
             name="description"
-            content={'Онлайн-курс "Профессия Светодизайнер" в аккредитованной школе Angel\'s school. Обучение на платформе на архитектурного светодизайнера в Москве, Санкт-Петербурге и в любом регионе РФ с сертификатом или дипломом о профессиональном дополнительном образовании.'}
+            content={
+                'Онлайн-курс "Профессия Светодизайнер" в аккредитованной школе Angel\'s school. Обучение на платформе на архитектурного светодизайнера в Москве, Санкт-Петербурге и в любом регионе РФ с сертификатом или дипломом о профессиональном дополнительном образовании.'
+            }
         />
     </>
 );
