@@ -9,9 +9,9 @@ import InterfaceSvg from 'shared/assets/svg/learning-schema__interface.inline.sv
 import DesignSvg from 'shared/assets/svg/learning-schema__design.inline.svg';
 import PersonalPageSvg from 'shared/assets/svg/learning-schema__personal-page.inline.svg';
 import GradeSvg from 'shared/assets/svg/learning-schema__grade.inline.svg';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Video } from 'shared/ui/Video/Video';
-import InsertedVideo from 'shared/assets/videos/video.mp4';
+// import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+// import { Video } from 'shared/ui/Video/Video';
+// import InsertedVideo from 'shared/assets/videos/video.mp4';
 import { FormModalButton } from 'features/FormModal';
 import { GlobalContext } from 'app/providers/GlobalContext/lib/GlobalProvider';
 
@@ -158,6 +158,33 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                                 <GradeSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                             </section>
                         </div>
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col mb-6 sm:mb-10 ">
+                            <div className="flex justify-between flex-col-reverse sm:flex-row gap-4">
+
+                                <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                                    Стоимость обучения
+                                </h3>
+                                <div className="py-2 px-4 rounded-[200px] h-fit bg-grey200 text-bluegrey1000 w-fit text-13med right-5 top-5">
+                                    Бесплатный курс
+                                </div>
+                            </div>
+                            <ul className="text-15med sm:text-17med text-bluegrey700 flex flex-col gap-4">
+                                <li>
+                                    <b>Обучение:</b>
+                                    <br />
+                                    Сразу после регистрации
+
+                                </li>
+                                <li>
+                                    <b>Формат:</b>
+                                    <br />
+                                    Видеолекции и практические задания
+                                </li>
+                            </ul>
+                            <p className="text-20semi sm:text-27semi mt-3 sm:mt-14">
+                                Бесплатно
+                            </p>
+                        </section>
                         <FormModalButton text="Записаться на курс" className="mx-auto" />
                     </section>
                 </div>
@@ -180,7 +207,7 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                     </p>
                 </div>
                 {/* <Video video={InsertedVideo} className="rounded-xl overflow-hidden mb-6 sm:mb-8" /> */}
-                <div className="flex flex-col gap-2 gap-5 sm:grid grid-cols-2 mb-[55px] sm:mb-[6.25rem]">
+                <div className="flex flex-col gap-2 sm:gap-5 sm:grid grid-cols-2 mb-[55px] sm:mb-[6.25rem]">
                     <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6 pb-5 sm:pb-6 flex flex-col">
                         <h3 className="text-20semi sm:text-27semi order-2 mb-3 sm:mb-4">
                             Лекции
@@ -229,7 +256,7 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                         <br />
                         платформы
                     </h2>
-                    <div className="flex flex-col gap-2 gap-5 sm:grid grid-cols-2 mb-6 sm:mb-10">
+                    <div className="flex flex-col gap-2 sm:gap-5 sm:grid grid-cols-2 mb-6 sm:mb-10">
                         <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
                             <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
                                 Интуитивно понятный
@@ -323,9 +350,27 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                             <GradeSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                         </section>
                     </div>
+                    <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col mb-6 sm:mb-10">
+                        <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                            Стоимость обучения
+                        </h3>
+                        <ul className="text-15med sm:text-17med text-bluegrey700 flex flex-col gap-4">
+                            <li>
+                                Проверка домашних заданий
+                            </li>
+                            <li>Куратор-наставник для мотивации успешной учебы</li>
+                            <li>Государственный диплом</li>
+                            <li>Обучение 9 недель</li>
+                        </ul>
+                        <p className="text-20semi sm:text-27semi mt-3 sm:mt-14">
+                            75 000 ₽
+
+                        </p>
+                    </section>
                     <FormModalButton text="Записаться на курс" className="mx-auto" />
                 </section>
             </div>
+
         </Section>
     );
 };

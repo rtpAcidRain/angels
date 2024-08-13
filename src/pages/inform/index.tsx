@@ -234,7 +234,7 @@ const InformPage: React.FC<PageProps> = () => (
                             Генеральный директор
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
-                            Крымская Екатерина Валерьевна
+                            Тарасова Екатерина Валерьевна
                         </p>
                         <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
                             Исполнительный директор
@@ -416,7 +416,10 @@ const InformPage: React.FC<PageProps> = () => (
                             Департаментом образования и науки г. Москвы
                             {' '}
                             <a
-                                href="/"
+                                download="Выписка из реестра лицензий № Л035-01298-77-01332470.pdf"
+                                href="https://angels-school.ru/include/gtrybuild/files/information/Выписка из реестра лицензий № Л035-01298-77-01332470.pdf"
+                                title="Выписка из реестра лицензий № Л035-01298-77-01332470"
+                                aria-label="Выписка из реестра лицензий № Л035-01298-77-01332470"
                                 className="text-13reg sm:text-17reg mb-4  text-blue600 "
                             >
                                 Выписка из реестра лицензий на осуществление образовательной
@@ -585,6 +588,30 @@ const InformPage: React.FC<PageProps> = () => (
                                     </tr>
                                 </tbody>
                             </table>
+                            <a
+                                className="text-13reg sm:text-17reg mb-4  text-blue600 block"
+                                download="ДПП_повышения_квалификации_«Архитектурный_светодизайн»_72_ак_ч.pdf"
+                                href="https://angels-school.ru/include/gtrybuild/files/information/direc_arch_pers--full.pdf"
+                                itemProp="url"
+                                title="Скачать учебный план"
+                                aria-label="Скачать учебный план"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                ДПП повышения квалификации «Архитектурный светодизайн» 72 ак. ч.
+                            </a>
+                            <a
+                                href="https://angels-school.ru/include/gtrybuild/files/information/direc_svet_pers--full.pdf"
+                                download="ДООП«Светодизайнер_Архитектурное_освещение»_16_ак_ч_.pdf"
+                                itemProp="url"
+                                title="Скачать учебный план"
+                                aria-label="Скачать учебный план"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-13reg sm:text-17reg mb-4  text-blue600 block"
+                            >
+                                ДООП «Светодизайнер Архитектурное освещение» 16 ак. ч.
+                            </a>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide
@@ -599,7 +626,7 @@ const InformPage: React.FC<PageProps> = () => (
                             Генеральный директор
                         </p>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
-                            Крымская Екатерина Валерьевна
+                            Тарасова Екатерина Валерьевна
                         </p>
                         <a
                             href="tel:+79003351900"
@@ -712,6 +739,7 @@ const InformPage: React.FC<PageProps> = () => (
                         </a>
                         Стоимость обучения отражается на соответствующей странице
                         образовательной программы на сайте Angels School
+                        {' '}
                         <Link className="text-13reg sm:text-17reg mb-4  text-blue600" to={RoutePath.main}>https://angels-school.ru</Link>
                     </SwiperSlide>
                     <SwiperSlide

@@ -6,6 +6,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { Button } from 'shared/ui/Button/Button';
 import Checked from 'shared/assets/svg/checked.inline.svg';
 import { GlobalContext } from 'app/providers/GlobalContext/lib/GlobalProvider';
+import { Link } from 'gatsby';
 import * as cls from './Form.module.css';
 
 interface FormProps {
@@ -103,7 +104,11 @@ export const Form = React.memo((props: FormProps) => {
                             </span>
                         </span>
                         <span className="flex-1 text-13med max-w-[321px]">
-                            Я согласен(а) на обработку персональных данных и с политикой
+                            Я согласен(а) на
+                            {' '}
+                            <Link to="/policy" className="text-blue600">обработку персональных данных</Link>
+                            {' '}
+                            и с политикой
                             обработки персональных данных
                         </span>
                     </label>

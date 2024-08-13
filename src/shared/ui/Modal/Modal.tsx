@@ -1,10 +1,11 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
     MutableRefObject,
-    ReactNode, useCallback, useEffect, useRef, useState,
+    ReactNode, useCallback, useContext, useEffect, useRef, useState,
 } from 'react';
 import Portal from 'shared/ui/Portal/Portal';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { GlobalContext } from 'app/providers/GlobalContext/lib/GlobalProvider';
 import * as cls from './Modal.module.css';
 
 export enum ModalPositionEnum {
@@ -38,6 +39,7 @@ const Modal = (props: ModalProps) => {
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
+    const { location } = useContext(GlobalContext);
 
     useEffect(() => {
         if (isOpen) {
@@ -64,6 +66,13 @@ const Modal = (props: ModalProps) => {
             }, position === ModalPositionEnum.LEFT ? ANIMATION_DELAY_LEFT : ANIMATION_DELAY);
         }
     }, [position, scroll, onClose]);
+
+    useEffect(() => {
+        if (isMounted) {
+            closeHandler();
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location, closeHandler]);
 
     useEffect(() => {
         if (!permanentClose) {

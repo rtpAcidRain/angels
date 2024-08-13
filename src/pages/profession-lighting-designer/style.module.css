@@ -1,0 +1,22 @@
+.swiperButton:global(.swiper-button-disabled){
+    display: none !important;
+}
+
+.swiperButton:global(:not(.swiper-button-disabled)) + .buttonFinal {
+    display: none !important;
+}
+
+.radio {
+    @apply text-15reg sm:text-17reg;
+    display: flex;
+    align-items: center;
+    cursor: pointer !important;
+    gap: 6px;
+
+    
+}
+
+.radio :global(label),
+.radio :global(input) {
+    cursor: pointer !important;
+}

@@ -67,6 +67,29 @@
     display: none;
 }
 
+.subListItem ul {
+    @apply pl-6 list-disc;
+}
+
+.subListItem .subListItemBody{
+    @apply grid ;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.2s ;
+    overflow: hidden;
+}
+
+.subListItem.subOpened .subListItemBody {
+    grid-template-rows: 1fr;
+}
+
+.subListItem .subListItemBody > span {
+    min-height: 0;
+}
+
+.subListItem .subListItemBody .subListItemBodyEl{
+    @apply flex flex-col gap-3 pt-4;
+}
+
 :global(.sublistItem):last-child{
     @apply pb-4 sm:pb-6 border-b border-dashed border-bluegrey200;
 }

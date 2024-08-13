@@ -10,6 +10,13 @@
     background-image: url("shared/assets/img/seo-access.webp");
 }
 
+.backgroundSvetLand {
+    background-image: url("shared/assets/img/bok.webp");
+    background-position: 50% bottom 0;
+    background-repeat: no-repeat;
+    background-size: 415px auto;
+}
+
 @screen sm {
     .background {
         @apply bg-right;
@@ -19,5 +26,9 @@
 
     .backgroundDoc {
         /*background-image: url("shared/assets/img/docum.webp");*/
+    }
+
+    .backgroundSvetLand {
+        background-image: url("shared/assets/img/backgroundSvetLand.png");
     }
 }

@@ -220,7 +220,12 @@ const TermPage: React.FC<PageProps> = () => (
                     <span>
                         В случае выявления неточностей в персональных данных, Пользователь может актуализировать их, направив Оператору уведомление с помощью электронной почты на электронный адрес Оператора
                         {' '}
-                        <Link to={RoutePath.main}>https://angels-school.ru</Link>
+                        <a
+                            itemProp="url"
+                            href="mailto:school@angels-school.ru"
+                        >
+                            school@angels-school.ru
+                        </a>
                         ,
                         {' '}
                         с пометкой «Актуализация персональных данных»
@@ -233,7 +238,12 @@ const TermPage: React.FC<PageProps> = () => (
                         Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив
                         Оператору уведомление с помощью электронной почты на электронный адрес Оператора
                         {' '}
-                        <Link to={RoutePath.main}>https://angels-school.ru</Link>
+                        <a
+                            itemProp="url"
+                            href="mailto:school@angels-school.ru"
+                        >
+                            school@angels-school.ru
+                        </a>
                         ,
                         {' '}
                         с пометкой «Отзыв согласия на обработку персональных данных».
@@ -249,7 +259,12 @@ const TermPage: React.FC<PageProps> = () => (
                         касающимся обработки его персональных данных, обратившись к Оператору
                         с помощью электронной почты
                         {' '}
-                        <Link to={RoutePath.main}>https://angels-school.ru</Link>
+                        <a
+                            itemProp="url"
+                            href="mailto:school@angels-school.ru"
+                        >
+                            school@angels-school.ru
+                        </a>
                         .
                         {' '}
                     </span>

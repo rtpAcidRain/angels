@@ -15,7 +15,10 @@ interface SeoBlockProps {
     theme?: SeoEnums,
     title?: string,
     text?: string,
-    children?: React.ReactNode
+    buttonText?: string,
+    subtitle?: string,
+    handleClick?: () => void,
+    children?: React.ReactNode,
 }
 
 export const SeoBlock = (props: SeoBlockProps) => {
@@ -24,6 +27,9 @@ export const SeoBlock = (props: SeoBlockProps) => {
         theme = SeoEnums.DEFAULT,
         title,
         text,
+        subtitle,
+        buttonText = 'Записаться',
+        handleClick,
         children,
     } = props;
 
@@ -105,6 +111,74 @@ export const SeoBlock = (props: SeoBlockProps) => {
         );
     }
 
+    if (subtitle) {
+        return (
+            <Section className={classNames('', {}, [className])}>
+                <div
+                    className={classNames(cls.background, {}, ['rounded-2xl sm:rounded-3xl bg-bluegrey900', cls.backgroundSvetLand])}
+                >
+                    <div className="p-4 sm:p-8">
+                        <h2 className="text-27semi sm:text-40semi text-whitefull mb-3 sm:mb-0 max-w-[685px]">
+
+                            {title || (
+                                <span>
+                                    Сделайте инвестицию
+                                    <br />
+                                    в свое будущее
+                                </span>
+                            )}
+
+                        </h2>
+                        {subtitle && (
+                            <p className="text-15reg sm:text-40semi  text-whitefull mb-[12.625rem] sm:mb-[8.1875rem] max-w-[707px]">
+
+                                {subtitle}
+
+                            </p>
+                        )}
+                        {handleClick
+                            ? (
+                                <>
+                                    <div className="hidden sm:flex">
+                                        <Button
+                                            text={buttonText}
+                                            aria-label={buttonText}
+                                            theme={ButtonTheme.WHITE}
+                                            onClick={handleClick}
+                                        />
+                                    </div>
+                                    <div className="sm:hidden">
+                                        <Button
+                                            text={buttonText}
+                                            aria-label={buttonText}
+                                            theme={ButtonTheme.PRIMARY}
+                                            onClick={handleClick}
+                                        />
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="hidden sm:flex">
+                                        <FormModalButton
+                                            text={buttonText}
+                                            aria-label={buttonText}
+                                        />
+                                    </div>
+                                    <div className="sm:hidden">
+                                        <FormModalButton
+                                            text={buttonText}
+                                            aria-label={buttonText}
+                                            theme={ButtonTheme.PRIMARY}
+                                        />
+                                    </div>
+                                </>
+                            )}
+                    </div>
+                </div>
+            </Section>
+        );
+    }
+
     return (
         <Section className={classNames('', {}, [className])}>
             <div
@@ -132,8 +206,8 @@ export const SeoBlock = (props: SeoBlockProps) => {
                         )}
                     </p>
                     <FormModalButton
-                        text="Записаться"
-                        aria-label="Записаться"
+                        text={buttonText}
+                        aria-label={buttonText}
                     />
                 </div>
             </div>

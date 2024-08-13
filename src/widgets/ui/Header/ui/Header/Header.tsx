@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React, { MutableRefObject, useRef } from 'react';
+import React, { MutableRefObject, useContext, useRef } from 'react';
 import { Link } from 'gatsby';
 import Logo from 'shared/assets/svg/logo.inline.svg';
 import LogoMob from 'shared/assets/svg/logoMob.inline.svg';
@@ -10,7 +10,8 @@ import { HeaderLink } from 'widgets/ui/Header/ui/HeaderLink/HeaderLink';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher/ThemeSwitcher';
 import { OpenNavButton } from 'features/MobileNav';
 import SubMenu from 'shared/assets/img/directionSub.jpg';
-import { ModalPositionEnum } from 'shared/ui/Modal/Modal';
+// import { ModalPositionEnum } from 'shared/ui/Modal/Modal';
+import { GlobalContext } from 'app/providers/GlobalContext/lib/GlobalProvider';
 import * as cls from './Header.module.css';
 import { HeaderItemsList } from '../../model/items';
 
@@ -20,6 +21,8 @@ interface HeaderProps {
 
 export const Header = React.memo((props: HeaderProps) => {
     const { className } = props;
+    const { location } = useContext(GlobalContext);
+
     const [subMenu, setSubMenu] = React.useState(false);
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
@@ -55,6 +58,40 @@ export const Header = React.memo((props: HeaderProps) => {
         </li>
 
     )), []);
+
+    if (location?.pathname === '/profession-lighting-designer/') {
+        return (
+            <header
+                className={classNames(cls.header, {}, [
+                    className,
+                    'flex items-center bg-whitefull dark:bg-bluegrey1000 ',
+                ])}
+            >
+                <nav className="container flex items-center lg:grid grid-cols-12 gap-5 h-full">
+                    <Link
+                        to={RoutePath.main}
+                        className="w-fit block col-span-2"
+                        itemProp="url"
+                        title="Главная страница"
+                        aria-label="Главная страница"
+                    >
+                        <Logo
+                            className={classNames(cls.logo, {}, [
+                                className,
+                                'logo hidden sm:block',
+                            ])}
+                        />
+                        <LogoMob
+                            className={classNames(cls.logo, {}, [
+                                className,
+                                'logo sm:hidden',
+                            ])}
+                        />
+                    </Link>
+                </nav>
+            </header>
+        );
+    }
 
     return (
         <header

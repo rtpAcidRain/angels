@@ -42,8 +42,7 @@ const list = [
     }, {
         title: 'Помогает ли ваш центр с трудоустройством?',
         text: `
-             Лучшим выпускникам мы предлагаем работу в нашей компании
-Выпускники получают рекомендательные письма, улучшающие их шансы на трудоустройство. Помогаем с резюме и репетируем собеседование.
+            Отбираем выпускников и помогаем трудоустроится в светотехническую компанию “Svet Expert”. На свое усмотрение предлагаем выпускникам пройти оплачиваемую стажировку  в светотехнической компании “Svet Expert”. 
         `,
     }, {
         title: 'Есть ли вступительные испытания/экзамены?',
@@ -85,57 +84,63 @@ export const PageLayout = (props: PageLayoutProps) => {
                         <Header />
                         <main>
                             {children}
-                            <Section className="lg:grid grid-cols-12 gap-5">
-                                <div
-                                    className={classNames(cls.formTitle, {}, [
-                                        className,
-                                        'bg-bluegrey900 ',
-                                        'rounded-[1rem] ',
-                                        'p-4 sm:p-6 mb-4 ',
-                                        'lg:mb-0 col-span-6 ',
-                                        'h-[350px] sm:h-full relative overflow-hidden',
-                                    ])}
-                                >
-                                    <div className="relative z-10">
-                                        <h2 className="text-24semi sm:text-40semi mb-[10px] sm:mb-[1.8125rem] text-whitefull">
-                                            Не упустите шанс:
-                                            <br />
-                                            запишись на курс
-                                            <br />
-                                            прямо сейчас!
-                                        </h2>
-                                        <p className="text-15med sm:text-17reg text-blue30 max-w-[225px] sm:max-w-[22.8125rem]">
-                                            Уникальная возможность получить образование по выгодной цене и
-                                            начать обучение уже сегодня!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-span-6">
-                                    <Form
-                                        className="
-                                    flex
-                                    flex-col
-                                    py-4
-                                    px-6
-                                    sm:pt-10
-                                    sm:px-14
-                                    sm:pb-[3.125rem]
-                                    gap-[0.625rem]
-                                    rounded-xl
-                                    rounded-[1rem]
-                                    min-h-full
-                                    border
-                                    border-blue300
-                                "
-                                    />
-                                </div>
-                            </Section>
-                            <Section title="Часто задаваемые вопросы">
-                                <Accordeon
-                                    list={list}
-                                    doublecol
-                                />
-                            </Section>
+                            {location.pathname !== '/profession-lighting-designer/'
+                                && (
+                                    <>
+                                        <Section className="lg:grid grid-cols-12 gap-5">
+                                            <div
+                                                className={classNames(cls.formTitle, {}, [
+                                                    className,
+                                                    'bg-bluegrey900 ',
+                                                    'rounded-[1rem] ',
+                                                    'p-4 sm:p-6 mb-4 ',
+                                                    'lg:mb-0 col-span-6 ',
+                                                    'h-[350px] sm:h-full relative overflow-hidden',
+                                                ])}
+                                            >
+                                                <div className="relative z-10">
+                                                    <h2 className="text-24semi sm:text-40semi mb-[10px] sm:mb-[1.8125rem] text-whitefull">
+                                                        Не упустите шанс:
+                                                        <br />
+                                                        запишись на курс
+                                                        <br />
+                                                        прямо сейчас!
+                                                    </h2>
+                                                    <p className="text-15med sm:text-17reg text-blue30 max-w-[225px] sm:max-w-[22.8125rem]">
+                                                        Уникальная возможность получить образование по выгодной цене и
+                                                        начать обучение уже сегодня!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="col-span-6">
+                                                <Form
+                                                    className="
+                                                    flex
+                                                    flex-col
+                                                    py-4
+                                                    px-6
+                                                    sm:pt-10
+                                                    sm:px-14
+                                                    sm:pb-[3.125rem]
+                                                    gap-[0.625rem]
+                                                    rounded-xl
+                                                    rounded-[1rem]
+                                                    min-h-full
+                                                    border
+                                                    border-blue300
+                                                "
+                                                />
+                                            </div>
+                                        </Section>
+                                        <Section title="Часто задаваемые вопросы">
+                                            <Accordeon
+                                                list={list}
+                                                doublecol
+                                            />
+                                        </Section>
+                                    </>
+                                )}
+
                         </main>
                         <Footer className="mt-auto" />
                     </div>
