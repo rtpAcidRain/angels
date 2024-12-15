@@ -49,3 +49,12 @@
     content: '';
     transform: rotate(45deg);
 }
+
+:global(.dark) .tippysvg rect,
+:global(.dark) .tippysvg path:nth-child(2) {
+    @apply stroke-grey400;
+}
+
+:global(.dark) .tippysvg path:nth-child(3) {
+ @apply fill-grey400;
+}

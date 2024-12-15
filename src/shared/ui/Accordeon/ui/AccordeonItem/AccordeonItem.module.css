@@ -32,6 +32,11 @@
     flex: 1;
 }
 
+
+:global(.dark) .accordeonItem .heading > span {
+    @apply text-whitefull;
+}
+
 .opened .body {
     grid-template-rows: 1fr;
 }
@@ -55,6 +60,14 @@
 
 .small {
     @apply rounded-xl p-3 sm:p-5 bg-blue30;
+}
+
+:global(.dark) .accordeonItem .body {
+    @apply text-bluegrey100;
+}
+
+:global(.dark) .small {
+    @apply bg-bluegrey900;
 }
 
 .small .heading {

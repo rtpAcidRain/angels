@@ -6,6 +6,7 @@ import {
     LearningSchema,
     SeoBlock,
     LessonBlock,
+    ForWho,
 } from 'widgets/ui/pageComponents';
 import Grid from 'shared/assets/svg/grid.inline.svg';
 import Document from 'shared/assets/svg/document.inline.svg';
@@ -113,7 +114,7 @@ const ArchitecPage: React.FC<PageProps> = () => (
                         <h2 className="text-13med sm:text-15med mb-1 sm:mb-2 text-bluegrey700">
                             Сколько длится обучение
                         </h2>
-                        <p className="text-15med sm:text-17med">3 недели / 16 ак. ч.</p>
+                        <p className="text-15med sm:text-17med dark:text-bluegrey900">3 недели / 16 ак. ч.</p>
                     </div>
                     <FormModalButton
                         className="sm:!px-[4.4375rem]"
@@ -122,10 +123,10 @@ const ArchitecPage: React.FC<PageProps> = () => (
                     />
                 </div>
             </div>
-            <ul className="hidden mt-4 bg-grey100 rounded-3xl p-10 text-17med text-bluegrey800  sm:grid grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] lg:grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] gap-y-6 gap-x-4 justify-between">
+            <ul className="hidden mt-4 bg-grey100 dark:bg-bluegrey900 rounded-3xl p-10 text-17med text-bluegrey800  sm:grid grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] lg:grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] gap-y-6 gap-x-4 justify-between">
                 <li className="flex gap-4 items-center">
-                    <Grid className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">
+                    <Grid className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">
                         Удобный и гибкий график
                         {' '}
                         <br />
@@ -133,14 +134,14 @@ const ArchitecPage: React.FC<PageProps> = () => (
                     </p>
                 </li>
                 <li className="flex gap-4 items-center">
-                    <Work className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">
+                    <Work className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">
                         Учёба в удобное время - можно совмещать с работой
                     </p>
                 </li>
                 <li className="flex gap-4 items-center">
-                    <Document className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">Сертификат</p>
+                    <Document className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">Сертификат</p>
                 </li>
             </ul>
         </Section>
@@ -181,21 +182,7 @@ const ArchitecPage: React.FC<PageProps> = () => (
                 </div>
             </div>
         </Section>
-        <Section className="" title="Кому подойдут курсы">
-            <div className="flex flex-col sm:grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-5 ">
-                {forWhoList?.map((el) => (
-                    <div
-                        key={el.title}
-                        className="bg-grey100 p-6 pb-4 rounded-2xl sm:p-8 flex flex-col flex-1 justify-between sm:min-h-[273px] h-auto"
-                    >
-                        <h3 className="text-20semi mb-12 sm:text-24semi ]">{el.title}</h3>
-                        <p className="text-15reg text-bluegrey800 sm:text-17med ">
-                            {el.text}
-                        </p>
-                    </div>
-                ))}
-            </div>
-        </Section>
+        <ForWho list={forWhoList} />
         <SeoBlock
             theme={SeoEnums.DOCUMENT}
             text={

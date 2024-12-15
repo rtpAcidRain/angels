@@ -7,6 +7,10 @@
     --header: 72px;
 }
 
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
 html {
     font-size: 16px;
 }
@@ -57,11 +61,15 @@ html.has-scroll-smooth body {
 }
 
 .logo path{
-    fill: #212121;
+    @apply fill-grey900 dark:fill-grey50;
 }
 
 .logo path:first-child{
-    fill: #0062C9;
+    @apply fill-blue700 dark:fill-blue800;
+}
+
+.logo path:nth-child(2){
+    @apply dark:fill-blue500;
 }
 
 .section {

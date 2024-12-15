@@ -92,10 +92,10 @@ const InformPage: React.FC<PageProps> = () => (
                 >
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000"
                         data-hash={infEls[0].url}
                     >
-                        <h2 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h2 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Общие условия
                         </h2>
                         <ul className="text-17reg mb-4 text-blue600">
@@ -146,7 +146,7 @@ const InformPage: React.FC<PageProps> = () => (
                                 </a>
                             </li>
                         </ul>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Договор об образовании
                         </h3>
                         <a
@@ -161,49 +161,69 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[1].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Полное наименование
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
-                            Общество с ограниченной ответственностью «Энджелс Скул»
+                            ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ЭНДЖЕЛС СКУЛ», (ООО
+                            «ЭНДЖЕЛС СКУЛ»),
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Сокращенное наименование
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             ООО «Энджелс Скул»
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
+                            ИНН
+                        </h3>
+                        <p className="text-13reg sm:text-17reg mb-4 block ">
+                            7722460240
+                        </p>
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
+                            ОГРН
+                        </h3>
+                        <p className="text-13reg sm:text-17reg mb-4 block ">
+                            1187746511776
+                        </p>
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
+                            Регистрационный номер лицензии:
+                        </h3>
+                        <p className="text-13reg sm:text-17reg mb-4 block ">
+                            Л035-01298-77/01332470
+                        </p>
+
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Участник сообщества
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             Новиков Андрей Александрович
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Место нахождения образовательной организации, ее представительств и филиалов (при наличии)
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             111024, г. Москва, вн. тер. г. муниципальный округ Лефортово, ш. Энтузиастов, д. 22/18, помещ. 4П
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Режим и график работы образовательной организации
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             С понедельника по пятницу с 09:00 до 18:00
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Контактные телефоны образовательной организации
                         </h3>
                         <a
-                            href="tel:+79003351900"
+                            href="tel:+79995775632"
                             className="text-13reg sm:text-17reg mb-4 block text-blue600"
                         >
-                            +7 (900) 335-19-00
+                            +7 (999) 577-56-32
                         </a>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Адрес электронной почты образовательной организации
                         </h3>
                         <a
@@ -215,40 +235,40 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[2].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Структурное подразделение ООО «Энджелс Скул»
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             Учебный Центр
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Участник сообщества
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             Новиков Андрей Александрович
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Генеральный директор
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             Тарасова Екатерина Валерьевна
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Исполнительный директор
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             Загурская Татьяна Юрьевна
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Место нахождения
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
                             <Link className="text-blue600" to={RoutePath.main}>https://angels-school.ru</Link>
                         </p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Адрес электронной почты
                         </h3>
                         <a
@@ -261,14 +281,14 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[3].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             1. Организационные документы
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4">Программа развития</p>
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             1. Локальные нормативные акты
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block text-blue600">
@@ -404,7 +424,7 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[4].url}
                     >
                         <p className="text-13reg sm:text-17reg mb-4">
@@ -616,10 +636,10 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[5].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             О руководителе образовательной организации
                         </h3>
                         <p className="text-13reg sm:text-17reg mb-4 block ">
@@ -629,10 +649,10 @@ const InformPage: React.FC<PageProps> = () => (
                             Тарасова Екатерина Валерьевна
                         </p>
                         <a
-                            href="tel:+79003351900"
+                            href="tel:+79995775632"
                             className="text-13reg sm:text-17reg mb-4 block text-blue600"
                         >
-                            +7 (900) 335-19-00
+                            +7(999)577-56-32
                         </a>
                         <a
                             href="mailto:school@angels-school.ru"
@@ -643,7 +663,7 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[6].url}
                     >
                         <p className="text-13reg sm:text-17reg mb-4">
@@ -703,10 +723,10 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[7].url}
                     >
-                        <p className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <p className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             Формы договоров и Порядок об оказании платных образовательных
                             услуг
                         </p>
@@ -744,37 +764,37 @@ const InformPage: React.FC<PageProps> = () => (
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[8].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             В редакции
                         </h3>
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[9].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             В редакции
                         </h3>
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[10].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             В редакции
                         </h3>
                     </SwiperSlide>
                     <SwiperSlide
                         tag="article"
-                        className="text-grey800 bg-whitefull dark:bg-bluegrey1000 "
+                        className="text-grey800 dark:text-whitefull bg-whitefull dark:bg-bluegrey1000 "
                         data-hash={infEls[11].url}
                     >
-                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900">
+                        <h3 className="text-15med sm:text-17semi mb-3 sm:mb-2 text-grey900 dark:text-whitefull ">
                             В редакции
                         </h3>
                     </SwiperSlide>

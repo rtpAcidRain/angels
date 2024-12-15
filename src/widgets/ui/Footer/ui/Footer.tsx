@@ -44,9 +44,9 @@ export const Footer = (props: FooterProps) => {
                                         <a
                                             className="text-17semi sm:text-20bold"
                                             itemProp="url"
-                                            href="tel:+79003351900"
+                                            href="tel:+79995775632"
                                         >
-                                            +7(900)335-19-00
+                                            +7(999)577-56-32
                                         </a>
                                         <p className="text-13med text-bluegrey400">
                                             Контактный центр
@@ -205,9 +205,9 @@ export const Footer = (props: FooterProps) => {
                                     <a
                                         className="text-17semi sm:text-20bold text-nowrap"
                                         itemProp="url"
-                                        href="tel:+79003351900"
+                                        href="tel:+79995775632"
                                     >
-                                        +7(900)335-19-00
+                                        +7(999)577-56-32
                                     </a>
                                     <p className="text-13med text-bluegrey400 sm:text-15med2">
                                         Контактный центр

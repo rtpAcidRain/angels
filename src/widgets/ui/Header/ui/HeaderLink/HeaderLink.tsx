@@ -22,7 +22,7 @@ export const HeaderLink = (props: HeaderLinkProps) => {
             className={
                 classNames('', {}, [
                     className,
-                    'text-bluegrey800 hover:text-blue700 transition-colors text-17reg h-full flex items-center px-3',
+                    'text-bluegrey800 hover:text-blue700 dark:text-grey50 dark:hover:text-blue400 transition-colors text-17reg h-full flex items-center px-3',
                 ])
             }
             to={to}

@@ -82,13 +82,13 @@ export const DirectionLink = (props: DirectionLinkProps) => {
             + 'sm:h-[20.3125rem] '
             + 'bg-right-bottom'
             + ' bg-[length:auto_100%] '
-            + ' hover:bg-blue30 transition-colors rounded-xl sm:rounded-2xl border border-bluegrey200',
-                'p-4 pb-[0.875rem] sm:p-6 relative bg-no-repeat',
+            + ' hover:bg-blue30 transition-colors rounded-xl sm:rounded-2xl border border-bluegrey200 dark:border-bluegrey700 ',
+                'hover:bg-bluegrey900 p-4 pb-[0.875rem] sm:p-6 relative bg-no-repeat',
             ])}
             style={{ backgroundImage: bg }}
         >
             <span className="flex flex-col gap-[0.875rem]">
-                <span className="whitespace-pre-wrap text-20semi sm:text-32semi relative z-10">
+                <span className="whitespace-pre-wrap text-20semi sm:text-32semi relative z-10 ">
                     {title}
                 </span>
                 {tippyTitle && (
@@ -113,11 +113,11 @@ export const DirectionLink = (props: DirectionLinkProps) => {
                         z-0
                         "
                 >
-                    <Icon className="w-4 h-4 sm:w-6 sm:w-6 sm:h-6 stroke-whitefull" />
+                    <Icon className="w-4 h-4 sm:w-6 sm:h-6 stroke-whitefull" />
                     Хит продаж
                 </span>
             )}
-            <span className="text-15med text-bluegrey700 sm:text-17med relative z-10">
+            <span className="text-15med text-bluegrey700 sm:text-17med relative z-10 dark:text-grey400">
                 {tag}
             </span>
         </Link>

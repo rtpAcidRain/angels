@@ -21,6 +21,7 @@ export interface ButtonProps {
     type?: 'button' | 'submit' | 'reset' | undefined;
     disabled?: boolean;
     sideLink?: boolean;
+    themeReversed?: boolean;
     [x:string]: any
 }
 
@@ -35,11 +36,13 @@ export const Button = React.memo((props: ButtonProps) => {
         type = 'button',
         disabled = false,
         sideLink = false,
+        themeReversed = false,
         ...otherProps
     } = props;
 
     const mods: Mods = {
         [cls[theme]]: true,
+        [cls.themeReversed]: themeReversed,
         [cls.underlined]: underlined,
         [cls.disabled]: disabled,
         [cls.withoutText]: !text,

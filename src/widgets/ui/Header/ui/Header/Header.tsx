@@ -149,7 +149,7 @@ export const Header = React.memo((props: HeaderProps) => {
                     {/* <button type="button" title="Поиск" aria-label="Поиск"> */}
                     {/*    <Search className="w-6 h-6 stroke-bluegrey900" /> */}
                     {/* </button> */}
-                    <ThemeSwitcher />
+                    {/* <ThemeSwitcher /> */}
                     <Button to={RoutePath.login} text="Войти" Icon={Login} sideLink />
                 </div>
                 <div className="flex lg:hidden items-center gap-4 ml-auto">

@@ -8,15 +8,24 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
+:global(.dark) .paginationEl {
+    @apply  border-bluegrey600 text-bluegrey50 ;
+    --left: #12191D;;
+    --right: #12191D;
+}
 
 .paginationEl:not(.paginationElActive):hover {
     @apply border-blue600 text-blue600;
 }
 
+:global(.dark) .paginationEl:not(.paginationElActive):hover {
+    @apply border-grey50 text-grey50;
+}
+
 .paginationElActive {
     @apply px-6 py-3 text-whitefull border-0;
-    --left: #005ec7;
-    --right: #53a5ff;
+    --left: #005ec7 !important;
+    --right: #53a5ff !important;
 }
 
 .inf :global(.swiper-slide:not(.swiper-slide-active)){

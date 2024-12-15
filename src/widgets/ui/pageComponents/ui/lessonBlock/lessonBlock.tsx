@@ -31,10 +31,10 @@ export const LessonBlock = (props: LessonBlockProps) => {
         <div
             className={classNames(cls.lessonBlock, {}, [
                 className,
-                'bg-bluegrey900 rounded-xl sm:rounded-2xl p-5 sm:mx-10 sm:px-0 sm:py-10 sm:grid grid-cols-12 gap-x-5 gap-y-4',
+                'bg-bluegrey900 dark:bg-whitefull rounded-xl sm:rounded-2xl p-5 sm:mx-10 sm:px-0 sm:py-10 sm:grid grid-cols-12 gap-x-5 gap-y-4',
             ])}
         >
-            <div className="hidden sm:block text-17semi pl-10 col-span-9 text-bluegrey50">Уроки</div>
+            <div className="hidden sm:block text-17semi pl-10 col-span-9 text-bluegrey50 dark:text-bluegrey700">Уроки</div>
             {/* <div className="hidden sm:block text-17med text-bluegrey50 text-center">Занятий</div> */}
             <ul className="flex flex-col gap-2 sm:gap-4 col-span-12">
                 {list?.map((el, i) => <LessonAcc key={el.themes[i].title} count={i + 1} themes={el.themes} disabled={list?.length < 2} />)}

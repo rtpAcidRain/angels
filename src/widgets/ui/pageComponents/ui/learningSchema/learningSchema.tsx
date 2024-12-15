@@ -14,6 +14,7 @@ import GradeSvg from 'shared/assets/svg/learning-schema__grade.inline.svg';
 // import InsertedVideo from 'shared/assets/videos/video.mp4';
 import { FormModalButton } from 'features/FormModal';
 import { GlobalContext } from 'app/providers/GlobalContext/lib/GlobalProvider';
+import { ButtonTheme } from 'shared/ui/Button/Button';
 
 interface LearningSchemaProps {
   className?: string;
@@ -25,53 +26,53 @@ export const LearningSchema = (props: LearningSchemaProps) => {
     if (location?.pathname === '/directions/svet/') {
         return (
             <Section className={classNames('', {}, [className])}>
-                <div className="bg-bluegrey900 rounded-3xl p-5 pt-10 sm:p-14">
+                <div className="bg-bluegrey900 dark:bg-whitefull rounded-3xl p-5 pt-10 sm:p-14">
                     <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 mb-6 sm:mb-[4.375rem]">
-                        <h2 className="text-27semi sm:text-64med max-w-[652px] text-whitefull flex-1">
+                        <h2 className="text-27semi sm:text-64med max-w-[652px] text-whitefull dark:text-bluegrey900 flex-1">
                             Как устроен
                             <br />
                             процесс обучения
                         </h2>
-                        <p className="max-w-[401px] text-17med text-bluegrey50 flex-1 mt-auto sm:pb-[0.375rem]">
+                        <p className="max-w-[401px] text-17med text-bluegrey50 flex-1 mt-auto dark:text-bluegrey700 sm:pb-[0.375rem]">
                             Мы используем удобную и современную платформу для обучения,
                             которая позволяет вам учиться в любом месте и в любое время
                         </p>
                     </div>
                     {/* <Video video={InsertedVideo} className="rounded-xl overflow-hidden mb-6 sm:mb-8" /> */}
                     <div className="flex flex-col gap-2 gap-5 sm:grid grid-cols-2 mb-[55px] sm:mb-[6.25rem]">
-                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6 pb-5 sm:pb-6 flex flex-col">
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6 pb-5 sm:pb-6 flex flex-col">
                             <h3 className="text-20semi sm:text-27semi order-2 mb-3 sm:mb-4">
                                 Лекции
                             </h3>
                             <LectionSvg className="h-12 sm:h-[5.625rem] order-1 fill-bluegrey900 mb-6 sm:mb-12 w-fit" />
-                            <p className="text-15med sm:text-17med text-bluegrey900 order-3">
+                            <p className="text-15med sm:text-17med text-bluegrey900 order-3 dark:text-bluegrey100">
                                 Лекции в формате видео с презентациями и проектами компании. После завершения проходит тестирование: выбор текста и графики, сопоставление, ввод ответов, установление последовательности.
                             </p>
                         </section>
-                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
                             <h3 className="text-20semi sm:text-27semi order-2 mb-3 sm:mb-4">
                                 Самостоятельная работа
                             </h3>
                             <PractisSvg className="h-12 sm:h-[5.625rem] order-1 fill-bluegrey900 mb-6 sm:mb-12 w-fit" />
-                            <p className="text-15med sm:text-17med text-bluegrey900 order-3">
+                            <p className="text-15med sm:text-17med text-bluegrey900 order-3 dark:text-bluegrey100">
                                 Студенты анализируют освещение выбранного здания и составляют варианты его улучшения.
                             </p>
                         </section>
                     </div>
                     <section>
-                        <h2 className="text-27semi sm:text-40semi text-whitefull mb-6 sm:mb-10">
+                        <h2 className="text-27semi sm:text-40semi text-whitefull mb-6 sm:mb-10 dark:text-bluegrey900">
                             Особенности
                             <br />
                             платформы
                         </h2>
                         <div className="flex flex-col gap-2 gap-5 sm:grid grid-cols-2 mb-6 sm:mb-10">
-                            <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                                <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                            <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                                <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                     Интуитивно понятный
                                     <br />
                                     интерфейс
                                 </h3>
-                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                     Вы сможете легко найти все необходимые материалы и функции, даже если никогда не пользовались онлайн-платформами для обучения.
 
                                     <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -88,13 +89,13 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
                                 <InterfaceSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                             </section>
-                            <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                                <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                            <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                                <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                     Адаптивный
                                     <br />
                                     дизайн
                                 </h3>
-                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                     Платформа автоматически подстраивается под любое устройство, будь то компьютер, планшет или смартфон, что позволяет вам учиться.
 
                                     <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -111,13 +112,13 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
                                 <DesignSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                             </section>
-                            <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                                <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                            <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                                <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                     Персональный
                                     <br />
                                     кабинет
                                 </h3>
-                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                     В вашем личном кабинете вы сможете отслеживать свой прогресс, просматривать оценки, скачивать материалы.
 
                                     <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -134,13 +135,13 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
                                 <PersonalPageSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                             </section>
-                            <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                                <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                            <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                                <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                     Система
                                     <br />
                                     оценивания
                                 </h3>
-                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                                <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                     Каждый тест оценивается отдельно с использованием числовой оценки и веса в диапазоне от 0% до 100%. Затем рассчитывается общая оценка.
 
                                     <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -158,17 +159,17 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                                 <GradeSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                             </section>
                         </div>
-                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col mb-6 sm:mb-10 ">
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col mb-6 sm:mb-10 ">
                             <div className="flex justify-between flex-col-reverse sm:flex-row gap-4">
 
-                                <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                                <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                     Стоимость обучения
                                 </h3>
                                 <div className="py-2 px-4 rounded-[200px] h-fit bg-grey200 text-bluegrey1000 w-fit text-13med right-5 top-5">
                                     Бесплатный курс
                                 </div>
                             </div>
-                            <ul className="text-15med sm:text-17med text-bluegrey700 flex flex-col gap-4">
+                            <ul className="text-15med sm:text-17med text-bluegrey700 flex flex-col gap-4 dark:text-whitefull pl-3 list-disc">
                                 <li>
                                     <b>Обучение:</b>
                                     <br />
@@ -185,7 +186,14 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                                 Бесплатно
                             </p>
                         </section>
-                        <FormModalButton text="Записаться на курс" className="mx-auto" />
+                        <span className="mx-auto block w-fit">
+                            <span className="block dark:hidden">
+                                <FormModalButton text="Записаться на курс" />
+                            </span>
+                            <span className="hidden dark:block">
+                                <FormModalButton text="Записаться на курс" theme={ButtonTheme.SECONDARY} themeReversed />
+                            </span>
+                        </span>
                     </section>
                 </div>
             </Section>
@@ -194,55 +202,55 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
     return (
         <Section className={classNames('', {}, [className])}>
-            <div className="bg-bluegrey900 rounded-3xl p-5 pt-10 sm:p-14">
+            <div className="bg-bluegrey900 dark:bg-whitefull rounded-3xl p-5 pt-10 sm:p-14">
                 <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 mb-6 sm:mb-8">
-                    <h2 className="text-27semi sm:text-64med max-w-[652px] text-whitefull flex-1">
+                    <h2 className="text-27semi sm:text-64med max-w-[652px] text-whitefull dark:text-bluegrey900 flex-1">
                         Как устроен
                         <br />
                         процесс обучения
                     </h2>
-                    <p className="max-w-[401px] text-17med text-bluegrey50 flex-1 mt-auto sm:pb-[0.375rem]">
+                    <p className="max-w-[401px] text-17med text-bluegrey50 flex-1 mt-auto sm:pb-[0.375rem] dark:text-bluegrey700">
                         Мы используем удобную и современную платформу для обучения,
                         которая позволяет вам учиться в любом месте и в любое время
                     </p>
                 </div>
                 {/* <Video video={InsertedVideo} className="rounded-xl overflow-hidden mb-6 sm:mb-8" /> */}
                 <div className="flex flex-col gap-2 sm:gap-5 sm:grid grid-cols-2 mb-[55px] sm:mb-[6.25rem]">
-                    <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6 pb-5 sm:pb-6 flex flex-col">
+                    <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6 pb-5 sm:pb-6 flex flex-col">
                         <h3 className="text-20semi sm:text-27semi order-2 mb-3 sm:mb-4">
                             Лекции
                         </h3>
                         <LectionSvg className="h-12 sm:h-[5.625rem] order-1 fill-bluegrey900 mb-6 sm:mb-12 w-fit" />
-                        <p className="text-15med sm:text-17med text-bluegrey900 order-3">
+                        <p className="text-15med sm:text-17med text-bluegrey900 order-3 dark:text-bluegrey100">
                             Лекции включают предзаписанные видео с презентациями и
                             материалами проектов. Завершение требует прохождения тестов с
                             различными типами заданий.
                         </p>
                     </section>
-                    <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
+                    <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
                         <h3 className="text-20semi sm:text-27semi order-2 mb-3 sm:mb-4">
                             Практика
                         </h3>
                         <PractisSvg className="h-12 sm:h-[5.625rem] order-1 fill-bluegrey900 mb-6 sm:mb-12 w-fit" />
-                        <p className="text-15med sm:text-17med text-bluegrey900 order-3">
+                        <p className="text-15med sm:text-17med text-bluegrey900 order-3 dark:text-bluegrey100">
                             В предзаписанных видео преподаватель демонстрирует действия в специализированном ПО, комментируя их. Студенты предварительно изучают алгоритм, исходные данные и результат.
                         </p>
                     </section>
-                    <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
+                    <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
                         <h3 className="text-20semi sm:text-27semi order-2 mb-3 sm:mb-4">
                             Самостоятельная работа
                         </h3>
                         <PresonalWorkSvg className="h-12 sm:h-[5.625rem] order-1 fill-bluegrey900 mb-6 sm:mb-12 w-fit" />
-                        <p className="text-15med sm:text-17med text-bluegrey900 order-3">
+                        <p className="text-15med sm:text-17med text-bluegrey900 order-3 dark:text-bluegrey100">
                             Студенты учатся через проектную работу, исправляя ошибки в готовых проектах или предлагают новые варианты. А также выполняют индивидуальные задания и создают собственные проекты.
                         </p>
                     </section>
-                    <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
+                    <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
                         <h3 className="text-20semi sm:text-27semi order-2 mb-3 sm:mb-4">
                             Консультация
                         </h3>
                         <ConsultationsSvg className="h-12 sm:h-[5.625rem] order-1 fill-bluegrey900 mb-6 sm:mb-12 w-fit" />
-                        <p className="text-15med sm:text-17med text-bluegrey900 order-3">
+                        <p className="text-15med sm:text-17med text-bluegrey900 order-3 dark:text-bluegrey100">
                             В зависимости от тарифа: групповые и индивидуальные консультации
                             в чате или на вебинарах. Преподаватель отвечает на заранее
                             направленные вопросы, также слушатели могут задать вопросы в
@@ -251,19 +259,19 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                     </section>
                 </div>
                 <section>
-                    <h2 className="text-27semi sm:text-40semi text-whitefull mb-6 sm:mb-10">
+                    <h2 className="text-27semi sm:text-40semi text-whitefull mb-6 sm:mb-10 dark:text-bluegrey900">
                         Особенности
                         <br />
                         платформы
                     </h2>
                     <div className="flex flex-col gap-2 sm:gap-5 sm:grid grid-cols-2 mb-6 sm:mb-10">
-                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                            <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                            <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                 Интуитивно понятный
                                 <br />
                                 интерфейс
                             </h3>
-                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                 Вы сможете легко найти все необходимые материалы и функции, даже если никогда не пользовались онлайн-платформами для обучения.
 
                                 <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -280,13 +288,13 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
                             <InterfaceSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                         </section>
-                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                            <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                            <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                 Адаптивный
                                 <br />
                                 дизайн
                             </h3>
-                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                 Платформа автоматически подстраивается под любое устройство, будь то компьютер, планшет или смартфон, что позволяет вам учиться.
 
                                 <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -303,13 +311,13 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
                             <DesignSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                         </section>
-                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                            <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                            <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                 Персональный
                                 <br />
                                 кабинет
                             </h3>
-                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                 В вашем личном кабинете вы сможете отслеживать свой прогресс, просматривать оценки, скачивать материалы.
 
                                 <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -326,13 +334,13 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
                             <PersonalPageSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                         </section>
-                        <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col">
-                            <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                        <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col">
+                            <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                                 Система
                                 <br />
                                 оценивания
                             </h3>
-                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10">
+                            <p className="text-15med sm:text-17med text-bluegrey700 mb-6 sm:mb-10 dark:text-bluegrey100">
                                 Каждый тест оценивается отдельно с использованием числовой оценки и веса в диапазоне от 0% до 100%. Затем рассчитывается общая оценка.
 
                                 <span className=" text-bluegrey900  block flex flex-col gap-2 my-4 sm:my-5">
@@ -350,11 +358,11 @@ export const LearningSchema = (props: LearningSchemaProps) => {
                             <GradeSvg className="h-[57px] sm:h-[4.875rem]  fill-bluegrey900 w-fit mt-auto" />
                         </section>
                     </div>
-                    <section className="bg-whitefull rounded-2xl sm:rounded-xl p-6  sm:pb-6 flex flex-col mb-6 sm:mb-10">
-                        <h3 className="text-20semi sm:text-27semi mb-3 sm:mb-10">
+                    <section className="bg-whitefull rounded-2xl sm:rounded-xl dark:bg-bluegrey900 p-6  sm:pb-6 flex flex-col mb-6 sm:mb-10">
+                        <h3 className="text-20semi sm:text-27semi dark:text-whitefull mb-3 sm:mb-10">
                             Стоимость обучения
                         </h3>
-                        <ul className="text-15med sm:text-17med text-bluegrey700 flex flex-col gap-4">
+                        <ul className="text-15med sm:text-17med text-bluegrey700 flex flex-col gap-4 dark:text-whitefull pl-3 list-disc">
                             <li>
                                 Проверка домашних заданий
                             </li>
@@ -367,7 +375,14 @@ export const LearningSchema = (props: LearningSchemaProps) => {
 
                         </p>
                     </section>
-                    <FormModalButton text="Записаться на курс" className="mx-auto" />
+                    <span className="mx-auto block w-fit">
+                        <span className="block w-fit dark:hidden">
+                            <FormModalButton text="Записаться на курс" />
+                        </span>
+                        <span className="hidden w-fit dark:block">
+                            <FormModalButton text="Записаться на курс" theme={ButtonTheme.SECONDARY} themeReversed />
+                        </span>
+                    </span>
                 </section>
             </div>
 

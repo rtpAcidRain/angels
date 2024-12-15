@@ -66,16 +66,16 @@ const IndexPage: React.FC<PageProps> = () => (
         <SeoBlock />
         <Section title="Контакты">
             <div className="relative">
-                <div className="aspect-[320/340] sm:aspect-[1420/620] overflow-hidden mb-4 lg:mb-0 rounded-3xl">
+                <div className="aspect-[320/340] sm:aspect-[1420/620] overflow-hidden mb-4 lg:mb-0 rounded-3xl relative z-0">
                     <iframe
-                        title="БЦ West Park"
-                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A30c8a948c49372c3a1e5da4cfffe7274c8cf2acafa18cde1e4be793f2d2c9980&amp;source=constructor"
+                        title="115035, г. Москва, Пятницкая ул., д 13с1"
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A78cf91dc57c1e143bb1a20ee8b5c17319e6a5a67b943863c8cc30e1673ee6f24&amp;source=constructor"
                         width="100%"
                         height="100%"
                         frameBorder="0"
                     />
                 </div>
-                <div className="flex flex-col gap-4 lg:absolute lg:flex-row bottom-[0.875rem] left-6">
+                <div className="flex flex-col gap-4 lg:absolute lg:flex-row bottom-[0.875rem] left-6 z-10">
                     <div
                         className="rounded-2xl p-6 bg-whitefull"
                         style={{
@@ -85,17 +85,21 @@ const IndexPage: React.FC<PageProps> = () => (
                         <ul className="grid gap-6 sm:grid-cols-2  lg:gap-y-8">
                             <li>
                                 <span className="text-15reg text-bluegrey500 mb-1 block">
-                                    Номер телефона
+                                    Номер телефонa
+                                    {' '}
+                                    <br />
                                 </span>
-                                <a className="block text-17reg" href="tel:+79003351900">
-                                    +7(900)335-19-00
+                                <a className="block text-17reg dark:text-bluegrey800" href="tel:+79995775632">
+                                    +7(999)577-56-32
                                 </a>
                             </li>
                             <li>
                                 <span className="text-15reg text-bluegrey500 mb-1 block">
                                     Адресс
+                                    {' '}
+                                    <br />
                                 </span>
-                                <span className="block text-17reg">
+                                <span className="block text-17reg dark:text-bluegrey800">
                                     115035, г. Москва,
                                     <br />
                                     Пятницкая ул., д 13с1
@@ -104,9 +108,11 @@ const IndexPage: React.FC<PageProps> = () => (
                             <li>
                                 <span className="text-15reg text-bluegrey500 mb-1 block">
                                     Email
+                                    {' '}
+                                    <br />
                                 </span>
                                 <a
-                                    className="block text-17reg"
+                                    className="block text-17reg dark:text-bluegrey800"
                                     href="mailto:school@angels-school.ru"
                                 >
                                     school@angels-school.ru
@@ -119,9 +125,11 @@ const IndexPage: React.FC<PageProps> = () => (
                             <li>
                                 <span className="text-15reg text-bluegrey500 mb-1 block">
                                     ОГРН
+                                    {' '}
+                                    <br />
                                 </span>
                                 <a
-                                    className="block text-17reg"
+                                    className="block text-17reg dark:text-bluegrey800"
                                     href="mailto:coop@svet-expert.com"
                                 >
                                     1187746511776

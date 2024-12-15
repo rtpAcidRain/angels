@@ -7,6 +7,7 @@ export const FormModalButton = (props: ButtonProps) => {
         className,
         text,
         theme,
+        themeReversed,
     } = props;
 
     const { setFormModal, setFormModalPermanent } = React.useContext(GlobalContext);
@@ -25,6 +26,7 @@ export const FormModalButton = (props: ButtonProps) => {
             onClick={openFormModal}
             text={text}
             aria-label={text}
+            themeReversed={themeReversed}
         />
     );
 };

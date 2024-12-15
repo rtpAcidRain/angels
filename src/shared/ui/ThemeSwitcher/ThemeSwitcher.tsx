@@ -24,7 +24,7 @@ export const ThemeSwitcher = () => {
             type="button"
             title="Сменить тему"
             aria-label="Сменить тему"
-            className="global-toggle-switch min-w-6 h-6 block !hidden"
+            className="global-toggle-switch min-w-6 h-6 block"
             onClick={() => setIsDark(isDark === 'dark' ? 'light' : 'dark')}
         >
             {isDark === 'dark' ? (

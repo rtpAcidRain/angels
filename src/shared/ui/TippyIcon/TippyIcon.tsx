@@ -25,7 +25,7 @@ export const TippyIcon = (props: TippyIconProps) => {
 
     return (
         <span className={`items-center gap-1 w-fill ${className && className}`}>
-            <span className="text-20med">{name}</span>
+            <span className="text-20med dark:text-grey400">{name}</span>
             <span className="flex items-center">
                 <Tippy
                     placement="bottom"

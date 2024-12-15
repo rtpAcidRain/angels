@@ -23,6 +23,10 @@
     display: none;
 }
 
+:global(.dark) .svg{
+    @apply  fill-bluegrey900;
+}
+
 .checkbox input {
     visibility: hidden;
     width: 0 !important;
@@ -37,8 +41,16 @@
     background-color: transparent;
 }
 
+:global(.dark) .checkboxEl::before{
+    @apply  border-whitefull;
+}
+
 .checkbox input:checked + .checkboxEl::before{
     @apply bg-bluegrey900;
+}
+
+:global(.dark) .checkbox input:checked + .checkboxEl::before{
+    @apply  bg-whitefull;
 }
 
 .checkbox input:checked + .checkboxEl > .svg {

@@ -39,7 +39,7 @@ export const MobileNavModal = (props: MobileNavModalProps) => {
                         className="pb-3 flex justify-between items-center border-b border-grey300 dark:border-bluegrey800"
                     >
                         <span className="text-17med text-grey600 dark:text-grey500 block">Навигация</span>
-                        <ThemeSwitcher />
+                        {/* <ThemeSwitcher /> */}
                     </div>
                     <nav className="flex-1 py-[1.375rem] min-h-0">
                         <ul className="h-full overflow-auto no-scrollbar flex flex-col gap-4">
@@ -75,7 +75,7 @@ export const MobileNavModal = (props: MobileNavModalProps) => {
                         {/*    <a href="/">Еще какая то</a> */}
                         {/*    <a href="/">И еще че то</a> */}
                         {/* </div> */}
-                        <a href="tel:+79003351900" className="text-bluegrey800 dark:text-grey200">+7 (900) 335-19-00</a>
+                        <a href="tel:+79995775632" className="text-bluegrey800 dark:text-grey200">+7 (999) 577-56-32</a>
                     </div>
                 </div>
             </div>

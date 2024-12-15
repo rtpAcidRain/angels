@@ -80,7 +80,7 @@ export const LessonAcc = (props: LessonAccProps) => {
 
     return (
         <li className={classNames(cls.lessonAcc, { [cls.disabled]: disabled }, [className])}>
-            <button type="button" disabled={disabled} className={classNames(cls.heading, { [cls.opened]: opened }, [className])} onClick={toggleOpened}>
+            <button type="button" disabled={disabled} className={classNames(cls.heading, { [cls.opened]: opened }, [className, 'mt-3 sm:mt-6'])} onClick={toggleOpened}>
                 <span className="flex flex-col col-span-10 sm:pl-16 sm:flex-row sm:items-center gap-3">
                     <span className="
                                 rounded-lg text-17med sm:text-17med px-3 py-[0.375rem] bg-bluegrey50 w-fit h-fit sm:py-3 sm:px-[1.65625rem]
@@ -94,7 +94,7 @@ export const LessonAcc = (props: LessonAccProps) => {
             </button>
             <span className={cls.body}>
                 <span>
-                    <ul className="pt-3 sm:pt-6 relative  flex flex-col">
+                    <ul className=" relative  flex flex-col">
                         {themes?.map((el, i) => {
                             if (el.deskription) {
                                 return (

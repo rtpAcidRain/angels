@@ -187,7 +187,7 @@ const ArchitecPage: React.FC<PageProps> = () => (
                         <h2 className="text-13med sm:text-15med mb-1 sm:mb-2 text-bluegrey700">
                             Сколько длится обучение
                         </h2>
-                        <p className="text-15med sm:text-17med">9 недель / 72 ак. ч.</p>
+                        <p className="text-15med sm:text-17med dark:text-bluegrey900">9 недель / 72 ак. ч.</p>
                     </div>
                     <FormModalButton
                         className="sm:!px-[4.4375rem]"
@@ -196,41 +196,41 @@ const ArchitecPage: React.FC<PageProps> = () => (
                     />
                 </div>
             </div>
-            <ul className="hidden mt-4 bg-grey100 rounded-3xl p-10 text-17med text-bluegrey800  sm:grid grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] lg:grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] gap-y-6 gap-x-4 justify-between">
+            <ul className="hidden mt-4 bg-grey100 dark:bg-bluegrey900 rounded-3xl p-10 text-17med text-bluegrey800  sm:grid grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] lg:grid-cols-[minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)_minmax(auto,_23.3125rem)] gap-y-6 gap-x-4 justify-between">
                 <li className="flex gap-4 items-center">
-                    <Calendar className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">
+                    <Calendar className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">
                         Навыки: от разработки концепции и эскизов до презентации идеи и
                         проекта
                     </p>
                 </li>
                 <li className="flex gap-4 items-center">
-                    <Grid className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">
+                    <Grid className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">
                         Удобный и гибкий график
                         <br />
                         для учеников
                     </p>
                 </li>
                 <li className="flex gap-4 items-center">
-                    <Document className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">Удостоверение о повышении квалификации</p>
+                    <Document className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">Удостоверение о повышении квалификации</p>
                 </li>
                 <li className="flex gap-4 items-center">
-                    <Website className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">Специализированное ПО</p>
+                    <Website className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">Специализированное ПО</p>
                 </li>
                 <li className="flex gap-4 items-center">
-                    <Chat className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">
+                    <Chat className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">
                         Проект для портфолио и обратная
                         <br />
                         связь от экспертов
                     </p>
                 </li>
                 <li className="flex gap-4 items-center">
-                    <Work className="fill-[#222628] w-8 h-8" />
-                    <p className="flex-1">
+                    <Work className="[&_path]:fill-[#222628]  [&_path]:dark:fill-whitefull w-8 h-8" />
+                    <p className="flex-1 dark:text-whitefull">
                         Учёба в удобное время - можно совмещать с работой
                     </p>
                 </li>

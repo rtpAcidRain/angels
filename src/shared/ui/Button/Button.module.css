@@ -88,6 +88,14 @@
     --right: #2d3e47;
 }
 
+:global(.dark) .primary:hover  {
+    --left:  #FFFFFF;
+    --right: #FFFFFF;
+}
+
+:global(.dark) .primary:hover .text,
+:global(.dark) .primary:hover  linearGradient stop:first-child,
+:global(.dark) .primary:hover  linearGradient stop:last-child,
 .secondary:hover  linearGradient stop:first-child,
 .secondary:hover  linearGradient stop:last-child,
 .secondary:hover .text,
@@ -97,6 +105,8 @@
     --textLeft: #005ec7;
     --textRight: #53a5ff;
 }
+
+
 /*---------------------------------*/
 
 /*ATTENTION*/
@@ -143,7 +153,7 @@
 
 
 .secondary{
-    @apply border border-bluegrey400 transition-colors;
+    @apply border border-bluegrey400 transition-colors dark:border-bluegrey600;
     padding: 0.6875rem 1.4375rem;
 }
 
@@ -155,8 +165,48 @@
 }
 
 .secondary:hover  {
-    @apply border-blue200 text-blue200;
+    @apply border-blue200 text-blue200 ;
 }
+
+:global(.dark) .secondary  linearGradient stop:first-child,
+:global(.dark) .secondary  linearGradient stop:last-child,
+:global(.dark) .secondary .text {
+    --textLeft: #ECEFF1;
+    --textRight: #ECEFF1;
+}
+
+:global(.dark) .secondary:hover  {
+    @apply border-grey50 text-grey50;
+}
+
+
+:global(.dark) .secondary:hover .text,
+:global(.dark) .secondary:hover  linearGradient stop:first-child,
+:global(.dark) .secondary:hover  linearGradient stop:last-child {
+    --textLeft:  #FAFAFA;
+    --textRight: #FAFAFA;
+}
+
+:global(.dark) .secondary.themeReversed  linearGradient stop:first-child,
+:global(.dark) .secondary.themeReversed  linearGradient stop:last-child,
+:global(.dark) .secondary.themeReversed .text {
+    --textLeft: rgb(38 50 56);
+    --textRight: rgb(38 50 56);
+}
+
+:global(.dark) .secondary.themeReversed:hover  {
+    @apply border-blue200 text-blue200 ;
+}
+
+
+:global(.dark) .secondary.themeReversed:hover .text,
+:global(.dark) .secondary.themeReversed:hover  linearGradient stop:first-child,
+:global(.dark) .secondary.themeReversed:hover  linearGradient stop:last-child {
+    --textLeft: #005ec7;
+    --textRight: #53a5ff;
+}
+
+
 
 
 /*---------------------------------*/

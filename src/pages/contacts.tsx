@@ -13,8 +13,8 @@ const ContactsPage: React.FC<PageProps> = () => (
                 <span className="text-15reg text-bluegrey500 mb-1 block">
                     Номер телефона
                 </span>
-                <a className="block text-17reg" href="tel:+79003351900">
-                    +7(900)335-19-00
+                <a className="block text-17reg" href="tel:+79995775632">
+                    +7(999)577-56-32
                 </a>
             </li>
             <li className="w-fit col-start-2 row-start-1 mt-auto">
